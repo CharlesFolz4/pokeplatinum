@@ -246,7 +246,7 @@ void ov19_021DBBA8(UnkStruct_ov19_021DBA9C *param0, u32 param1, u32 param2, NNS_
 
     for (v3 = 0, v4 = 0; v3 < 5; v3++) {
         for (v2 = 0; v2 < 6; v2++) {
-            boxMon = sub_02079C9C(pcBoxes, param1, v4++);
+            boxMon = GetBoxedPokemonFrom(pcBoxes, param1, v4++);
             v7 = BoxPokemon_EnterDecryptionContext(boxMon);
             species = BoxPokemon_GetValue(boxMon, MON_DATA_SPECIES, NULL);
 
@@ -388,7 +388,7 @@ static void ov19_021DBDF4(UnkStruct_ov19_021DBA9C *param0)
     }
 
     for (v4 = 0; v4 < 18; v4++) {
-        param0->unk_94[v4] = sub_02079B54(ov19_021D5E90(param0->unk_0C), v4);
+        param0->unk_94[v4] = GetPokemonCountInBox(ov19_021D5E90(param0->unk_0C), v4);
     }
 }
 

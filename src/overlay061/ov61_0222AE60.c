@@ -44,15 +44,15 @@ void ov61_0222AE88(SaveData *param0, const PCBoxes *param1, int param2, UnkStruc
     Strbuf_Free(v0);
 
     for (v1 = 0; v1 < 30; v1++) {
-        param3->unk_28[v1] = sub_02079C08(param1, param2, v1, 5, NULL);
-        param3->unk_64[v1] = sub_02079C08(param1, param2, v1, 0, NULL);
-        param3->unk_DC[v1] = sub_02079C08(param1, param2, v1, 7, NULL);
+        param3->unk_28[v1] = GetBoxedPokemonData(param1, param2, v1, MON_DATA_SPECIES, NULL);
+        param3->unk_64[v1] = GetBoxedPokemonData(param1, param2, v1, MON_DATA_PERSONALITY, NULL);
+        param3->unk_DC[v1] = GetBoxedPokemonData(param1, param2, v1, MON_DATA_OT_ID, NULL);
 
-        if (sub_02079C08(param1, param2, v1, 174, NULL) == SPECIES_EGG) {
+        if (GetBoxedPokemonData(param1, param2, v1, MON_DATA_SPECIES_EGG, NULL) == SPECIES_EGG) {
             param3->unk_154 |= 1 << v1;
         }
 
-        param3->unk_158[v1] = sub_02079C08(param1, param2, v1, 112, NULL);
+        param3->unk_158[v1] = GetBoxedPokemonData(param1, param2, v1, MON_DATA_FORM, NULL);
     }
 
     param3->unk_176 = sub_02079AA8(param1, param2);

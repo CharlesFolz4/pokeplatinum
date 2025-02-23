@@ -63,7 +63,7 @@ BOOL ScrCmd_24F(ScriptContext *param0)
 
     for (v13 = 0, v14 = 0, v18 = 0; v18 < 18; v18++) {
         for (v17 = 0; v17 < (5 * 6); v17++) {
-            v2 = sub_02079C9C(v3, v18, v17);
+            v2 = GetBoxedPokemonFrom(v3, v18, v17);
             v19 = BoxPokemon_GetValue(v2, MON_DATA_SPECIES, NULL);
 
             if (v19) {
