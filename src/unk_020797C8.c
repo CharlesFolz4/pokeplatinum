@@ -10,12 +10,14 @@
 #include "savedata.h"
 #include "strbuf.h"
 
+#define BOX1_TEXT_BANK_ENTRYID 6
+
 typedef struct PCBoxes {
     u32 currentBoxIndex;
     BoxPokemon boxedPokemonArray[18][30];
     u16 boxNames[18][20];
-    u8 unk_13B4[18]; 
-    u8 unk_13C6; //This seems like some sort of bit flag? but I don't know for what
+    u8 unk_13B4[18];
+    u8 unk_13C6; // This seems like some sort of bit flag? but I don't know for what
 } PCBoxes;
 
 static void sub_020797DC(PCBoxes *pcBoxes);
@@ -31,7 +33,7 @@ u32 PCBoxes_SaveSize(void)
     return sizeof(PCBoxes);
 }
 
-//InitPcSystem?
+// InitPokemonStorageSystem?
 static void sub_020797DC(PCBoxes *pcBoxes)
 {
     u32 boxIndex, monPosInBox;
@@ -43,8 +45,8 @@ static void sub_020797DC(PCBoxes *pcBoxes)
         }
     }
 
-    //Pretty sure that monPosInBox isn't being used in the same way here as in the previous loop,
-    //so the variable's name no longer't accurately reflects what it's doing in this loop
+    // Pretty sure that monPosInBox isn't being used in the same way here as in the previous loop,
+    // so the variable's name no longer accurately reflects what it's doing in this loop
     for (boxIndex = 0, monPosInBox = 0; boxIndex < MAX_PC_BOXES; boxIndex++) {
         pcBoxes->unk_13B4[boxIndex] = monPosInBox++;
 
@@ -55,12 +57,11 @@ static void sub_020797DC(PCBoxes *pcBoxes)
 
     pcBoxes->unk_13C6 = 0;
 
-    //load box names
-    //TODO: figure out how to rename generated TEXT_BANK_UNK_0018 to TEXT_BANK_DEFAULT_BOX_NAMES
-    messageLoader = MessageLoader_Init(MESSAGE_LOADER_NARC_HANDLE, NARC_INDEX_MSGDATA__PL_MSG, TEXT_BANK_UNK_0018, 0);
+    // load box names
+    messageLoader = MessageLoader_Init(MESSAGE_LOADER_NARC_HANDLE, NARC_INDEX_MSGDATA__PL_MSG, TEXT_BANK_POKEMON_STORAGE_SYSTEM, 0);
     if (messageLoader) {
         for (boxIndex = 0; boxIndex < MAX_PC_BOXES; boxIndex++) {
-            MessageLoader_Get(messageLoader, 6 + boxIndex, pcBoxes->boxNames[boxIndex]);
+            MessageLoader_Get(messageLoader, BOX1_TEXT_BANK_ENTRYID + boxIndex, pcBoxes->boxNames[boxIndex]);
         }
 
         MessageLoader_Free(messageLoader);
@@ -251,7 +252,7 @@ void sub_02079AC4(PCBoxes *pcBoxes, u32 boxIndex, u32 param2)
         boxIndex = pcBoxes->currentBoxIndex;
     }
 
-    //What do 16 and 8 mean here? 
+    // What do 16 and 8 mean here?
     if ((boxIndex < MAX_PC_BOXES) && (param2 < (16 + 8))) {
         if (param2 >= 16) {
             param2 += 8;
@@ -387,7 +388,7 @@ BoxPokemon *GetBoxedPokemonFrom(const PCBoxes *pcBoxes, u32 boxIndex, u32 monPos
     return (BoxPokemon *)&(pcBoxes->boxedPokemonArray[boxIndex][monPosInBox]);
 }
 
-//TODO: figure out unk_13C6, and how it relates to (16 + 8)
+// TODO: figure out unk_13C6, and how it relates to 16 and 8
 void sub_02079CD8(PCBoxes *pcBoxes, u32 param1)
 {
     GF_ASSERT(param1 < 8);

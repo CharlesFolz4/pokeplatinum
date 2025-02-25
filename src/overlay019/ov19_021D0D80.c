@@ -2806,7 +2806,7 @@ static void ov19_021D45A8(UnkStruct_ov19_021D5DF8 *param0, u32 *param1)
 {
     switch (*param1) {
     case 0:
-    SetCurrentBoxIndex(param0->unk_120, ov19_021D5E68(&param0->unk_00));
+        SetCurrentBoxIndex(param0->unk_120, ov19_021D5E68(&param0->unk_00));
         ov19_021D52F4(param0);
         ov19_021D6594(param0->unk_114, 4);
         (*param1)++;
