@@ -138,7 +138,7 @@ void ov19_021DFB50(UnkStruct_ov19_021D4DF0 *param0)
 void ov19_021DFB94(UnkStruct_ov19_021D4DF0 *param0, UnkEnum_021DFB94 param1)
 {
     UnkStruct_ov19_021DF964 *v0 = &(param0->unk_74);
-    const PCBoxes *v1 = ov19_021D5E90(param0);
+    const PCBoxes *pcBoxes = ov19_021D5E90(param0);
     u32 v2;
 
     ov19_021DFCF8(v0);
@@ -147,7 +147,7 @@ void ov19_021DFB94(UnkStruct_ov19_021D4DF0 *param0, UnkEnum_021DFB94 param1)
     ov19_021DFD08(v0, UnkEnum_021DFB94_06);
     ov19_021DFD08(v0, UnkEnum_021DFB94_07);
 
-    v2 = sub_02079D20(v1);
+    v2 = sub_02079D20(pcBoxes);
 
     if (v2 > 0) {
         ov19_021DFD08(v0, UnkEnum_021DFB94_08);

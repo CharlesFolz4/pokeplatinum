@@ -429,7 +429,7 @@ static void ov19_021DBF4C(UnkStruct_ov19_021DBA9C *param0)
     v0 = ov19_021D5E90(param0->unk_0C);
     v1 = &param0->unk_10[0];
 
-    sub_02079AF4(v0, param0->unk_E0, param0->unk_4BFC);
+    CopyBoxName(v0, param0->unk_E0, param0->unk_4BFC);
 
     v2 = Font_CalcStrbufWidth(FONT_SYSTEM, param0->unk_4BFC, 0);
     v3 = 48 - (v2 / 2);

@@ -39,7 +39,7 @@ void ov61_0222AE88(SaveData *param0, const PCBoxes *param1, int param2, UnkStruc
     MI_CpuClear8(param3, sizeof(UnkStruct_ov62_02239DA4));
 
     v0 = Strbuf_Init(20 * 3, param4);
-    sub_02079AF4(param1, param2, v0);
+    CopyBoxName(param1, param2, v0);
     Strbuf_ToChars(v0, param3->unk_00, 20);
     Strbuf_Free(v0);
 
