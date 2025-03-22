@@ -464,15 +464,14 @@ CommonScript_HoneyTree:
     GoToIfNe VAR_RESULT, FALSE, CommonScript_HoneyTreeWithHoney
     GetHoneyTreeStatus VAR_RESULT
     GoToIfEq VAR_RESULT, TREE_STATUS_BARE, CommonScript_HoneyTreeBareNoHoney
-    GoToIfEq VAR_RESULT, TREE_STATUS_SLATHERED, CommonScript_HoneyTreeSlatheredNoHoney
-    GoToIfEq VAR_RESULT, TREE_STATUS_ENCOUNTER, CommonScript_HoneyTreeEncounter
+    GoToIfEq VAR_RESULT, TREE_STATUS_HONEY, CommonScript_HoneyTreeEncounter
     End
 
 CommonScript_HoneyTreeWithHoney:
     GetHoneyTreeStatus VAR_RESULT
     GoToIfEq VAR_RESULT, TREE_STATUS_BARE, CommonScript_HoneyTreeBareWithHoney
-    GoToIfEq VAR_RESULT, TREE_STATUS_SLATHERED, CommonScript_HoneyTreeSlatheredWithHoney
-    GoToIfEq VAR_RESULT, TREE_STATUS_ENCOUNTER, CommonScript_HoneyTreeEncounter
+    GoToIfEq VAR_RESULT, TREE_STATUS_HONEY, CommonScript_HoneyTreeEncounter
+    GoTO CommonScript_HoneyTreeBareWithHoney
     End
 
 CommonScript_HoneyTreeBareNoHoney:

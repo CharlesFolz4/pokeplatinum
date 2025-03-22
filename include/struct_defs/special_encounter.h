@@ -18,7 +18,7 @@ typedef struct TrophyGardenMons {
 } TrophyGardenMons;
 
 typedef struct HoneyTree {
-    int minutesRemaining;
+    int treeStatus;
     u8 encounterSlot;
     u8 encounterTableIndex; // value is normally just encounterGroup - 1
     u8 encounterGroup;

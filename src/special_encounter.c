@@ -3,6 +3,8 @@
 #include <nitro.h>
 #include <string.h>
 
+#include "constants/honey_tree.h"
+
 #include "struct_defs/radar_chain_records.h"
 #include "struct_defs/special_encounter.h"
 
@@ -31,7 +33,7 @@ void SpecialEncounter_Init(SpecialEncounter *specialEncounter)
     v1->lastSlatheredTree = NUM_HONEY_TREES;
 
     for (i = 0; i < NUM_HONEY_TREES; i++) {
-        v1->honeyTrees[i].minutesRemaining = 0;
+        v1->honeyTrees[i].treeStatus = TREE_STATUS_BARE;
         v1->honeyTrees[i].encounterSlot = 0;
         v1->honeyTrees[i].encounterTableIndex = 0;
         v1->honeyTrees[i].encounterGroup = 0;
@@ -73,10 +75,17 @@ SpecialEncounter *SaveData_GetSpecialEncounters(SaveData *saveData)
     return SaveData_SaveTable(saveData, SAVE_TABLE_ENTRY_ENCOUNTERS);
 }
 
-// This is exclusively used in combination with SpecialEncounter_GetHoneyTree, so they could've just been one function...
 PlayerHoneyTreeStates *SpecialEncounter_GetPlayerHoneyTreeStates(SpecialEncounter *speEnc)
 {
     return &(speEnc->treeStates);
+}
+
+HoneyTree *SpecialEncounter_GetHoneyTree(u8 treeID, SpecialEncounter *speEnc)
+{
+    PlayerHoneyTreeStates *treeDat = &speEnc->treeStates;
+    HoneyTree *tree = &treeDat->honeyTrees[treeID];
+
+    return tree;
 }
 
 const int SpecialEncounter_GetLastSlatheredTreeId(PlayerHoneyTreeStates *treeDat)
@@ -87,37 +96,6 @@ const int SpecialEncounter_GetLastSlatheredTreeId(PlayerHoneyTreeStates *treeDat
 void SpecialEncounter_SetLastSlatheredTreeId(const u8 treeId, PlayerHoneyTreeStates *treeDat)
 {
     treeDat->lastSlatheredTree = treeId;
-}
-
-// Inconsistency: Roamers have bounds checking on the IDs used, but Honey Trees don't
-HoneyTree *SpecialEncounter_GetHoneyTree(const u8 treeId, PlayerHoneyTreeStates *treeDat)
-{
-    HoneyTree *tree = &treeDat->honeyTrees[treeId];
-    return tree;
-}
-
-// These are minute timers. They start at 24 hours'worth of minutes
-void SpecialEncounter_DecrementHoneyTreeTimers(SaveData *saveData, const int decrement)
-{
-    int i;
-    PlayerHoneyTreeStates *treeDat;
-    SpecialEncounter *speEnc;
-    HoneyTree *tree;
-
-    speEnc = SaveData_GetSpecialEncounters(saveData);
-    treeDat = &(speEnc->treeStates);
-
-    for (i = 0; i < NUM_HONEY_TREES; i++) {
-        tree = SpecialEncounter_GetHoneyTree(i, treeDat);
-
-        if (tree->minutesRemaining != 0) {
-            tree->minutesRemaining -= decrement;
-
-            if (tree->minutesRemaining < 0) {
-                tree->minutesRemaining = 0;
-            }
-        }
-    }
 }
 
 void SpecialEncounter_EnableSwarms(SaveData *saveData)
