@@ -28,7 +28,7 @@ enum TreeGroups {
     TREE_GROUP_A = 1,
     TREE_GROUP_B,
     TREE_GROUP_MUNCHLAX
-}
+};
 
 static void GetTreeEncounterGroup(const BOOL isMunchlaxTree, u8 *param1);
 static void GetTreeEncounterSlot(u8 *slot);

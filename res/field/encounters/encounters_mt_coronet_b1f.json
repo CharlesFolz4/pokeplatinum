@@ -2,52 +2,76 @@
     "land_rate": 10,
     "land_encounters": [
         {
-            "level": 33,
-            "species": "SPECIES_BRONZOR"
+            "level_max": 33,
+			"level_min": 33,
+            "species": "SPECIES_BRONZOR",
+			"weight": 10
         },
         {
-            "level": 34,
-            "species": "SPECIES_GRAVELER"
+            "level_max": 34,
+			"level_min": 34,
+            "species": "SPECIES_GRAVELER",
+			"weight": 10
         },
         {
-            "level": 33,
-            "species": "SPECIES_MEDITITE"
+            "level_max": 33,
+			"level_min": 33,
+            "species": "SPECIES_MEDITITE",
+			"weight": 10
         },
         {
-            "level": 32,
-            "species": "SPECIES_CLEFAIRY"
+            "level_max": 32,
+			"level_min": 32,
+            "species": "SPECIES_CLEFAIRY",
+			"weight": 10
         },
         {
-            "level": 35,
-            "species": "SPECIES_MACHOKE"
+            "level_max": 35,
+			"level_min": 35,
+            "species": "SPECIES_MACHOKE",
+			"weight": 10
         },
         {
-            "level": 35,
-            "species": "SPECIES_MEDITITE"
+            "level_max": 35,
+			"level_min": 35,
+            "species": "SPECIES_MEDITITE",
+			"weight": 10
         },
         {
-            "level": 32,
-            "species": "SPECIES_CHINGLING"
+            "level_max": 32,
+			"level_min": 32,
+            "species": "SPECIES_CHINGLING",
+			"weight": 10
         },
         {
-            "level": 33,
-            "species": "SPECIES_NOSEPASS"
+            "level_max": 33,
+			"level_min": 33,
+            "species": "SPECIES_NOSEPASS",
+			"weight": 10
         },
         {
-            "level": 34,
-            "species": "SPECIES_GOLBAT"
+            "level_max": 34,
+			"level_min": 34,
+            "species": "SPECIES_GOLBAT",
+			"weight": 10
         },
         {
-            "level": 34,
-            "species": "SPECIES_CHINGLING"
+            "level_max": 34,
+			"level_min": 34,
+            "species": "SPECIES_CHINGLING",
+			"weight": 10
         },
         {
-            "level": 34,
-            "species": "SPECIES_GOLBAT"
+            "level_max": 34,
+			"level_min": 34,
+            "species": "SPECIES_GOLBAT",
+			"weight": 10
         },
         {
-            "level": 34,
-            "species": "SPECIES_CHINGLING"
+            "level_max": 34,
+			"level_min": 34,
+            "species": "SPECIES_CHINGLING",
+			"weight": 10
         }
     ],
     "swarms": [
@@ -99,27 +123,32 @@
         {
             "level_max": 30,
             "level_min": 20,
-            "species": "SPECIES_ZUBAT"
+            "species": "SPECIES_ZUBAT",
+			"weight": 10
         },
         {
             "level_max": 30,
             "level_min": 20,
-            "species": "SPECIES_ZUBAT"
+            "species": "SPECIES_ZUBAT",
+			"weight": 10
         },
         {
             "level_max": 40,
             "level_min": 20,
-            "species": "SPECIES_GOLBAT"
+            "species": "SPECIES_GOLBAT",
+			"weight": 10
         },
         {
             "level_max": 40,
             "level_min": 20,
-            "species": "SPECIES_GOLBAT"
+            "species": "SPECIES_GOLBAT",
+			"weight": 10
         },
         {
             "level_max": 40,
             "level_min": 20,
-            "species": "SPECIES_GOLBAT"
+            "species": "SPECIES_GOLBAT",
+			"weight": 10
         }
     ],
     "old_rod_rate": 25,
@@ -127,27 +156,32 @@
         {
             "level_max": 6,
             "level_min": 3,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_MAGIKARP",
+			"weight": 10
         },
         {
             "level_max": 7,
             "level_min": 4,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_MAGIKARP",
+			"weight": 10
         },
         {
             "level_max": 10,
             "level_min": 5,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_MAGIKARP",
+			"weight": 10
         },
         {
             "level_max": 10,
             "level_min": 5,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_MAGIKARP",
+			"weight": 10
         },
         {
             "level_max": 15,
             "level_min": 5,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_MAGIKARP",
+			"weight": 10
         }
     ],
     "good_rod_rate": 50,
@@ -155,27 +189,32 @@
         {
             "level_max": 20,
             "level_min": 15,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_MAGIKARP",
+			"weight": 10
         },
         {
             "level_max": 20,
             "level_min": 15,
-            "species": "SPECIES_BARBOACH"
+            "species": "SPECIES_BARBOACH",
+			"weight": 10
         },
         {
             "level_max": 25,
             "level_min": 10,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_MAGIKARP",
+			"weight": 10
         },
         {
             "level_max": 25,
             "level_min": 10,
-            "species": "SPECIES_BARBOACH"
+            "species": "SPECIES_BARBOACH",
+			"weight": 10
         },
         {
             "level_max": 25,
             "level_min": 10,
-            "species": "SPECIES_BARBOACH"
+            "species": "SPECIES_BARBOACH",
+			"weight": 10
         }
     ],
     "super_rod_rate": 75,
@@ -183,27 +222,32 @@
         {
             "level_max": 40,
             "level_min": 30,
-            "species": "SPECIES_GYARADOS"
+            "species": "SPECIES_GYARADOS",
+			"weight": 10
         },
         {
             "level_max": 40,
             "level_min": 30,
-            "species": "SPECIES_WHISCASH"
+            "species": "SPECIES_WHISCASH",
+			"weight": 10
         },
         {
             "level_max": 55,
             "level_min": 40,
-            "species": "SPECIES_GYARADOS"
+            "species": "SPECIES_GYARADOS",
+			"weight": 10
         },
         {
             "level_max": 55,
             "level_min": 40,
-            "species": "SPECIES_WHISCASH"
+            "species": "SPECIES_WHISCASH",
+			"weight": 10
         },
         {
             "level_max": 55,
             "level_min": 40,
-            "species": "SPECIES_WHISCASH"
+            "species": "SPECIES_WHISCASH",
+			"weight": 10
         }
     ],
     "elusive_rod_encounter": {

@@ -18,10 +18,13 @@ def as_species(s: str) -> bytes:
 def convert_land(encs: list) -> bytes:
     return b''.join(itertools.chain.from_iterable([
         (
-            u32(encs[i]['level']),
+            u8(encs[i]['level_max']),
+            u8(encs[i]['level_min']),
+            u8(encs[i]['weight']),
+            pad(1),
             as_species(encs[i]['species']),
         )
-        for i in range(12)
+        for i in range(len(encs))
     ]))
 
 def convert_water(encs: list) -> bytes:
@@ -29,12 +32,12 @@ def convert_water(encs: list) -> bytes:
         (
             u8(encs[i]['level_max']),
             u8(encs[i]['level_min']),
-            pad(2),
+            u8(encs[i]['weight']),
+            pad(1),
             as_species(encs[i]['species']),
         )
-        for i in range(5)
+        for i in range(len(encs))
     ]))
-
 
 input_path = pathlib.Path(sys.argv[1])
 output_path = pathlib.Path(sys.argv[2])
