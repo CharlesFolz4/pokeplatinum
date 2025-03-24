@@ -2,52 +2,76 @@
     "land_rate": 10,
     "land_encounters": [
         {
-            "level": 25,
-            "species": "SPECIES_GEODUDE"
+            "level_max": 25,
+			"level_min": 25,
+            "species": "SPECIES_GEODUDE",
+			"weight": 10
         },
         {
-            "level": 24,
-            "species": "SPECIES_GEODUDE"
+            "level_max": 24,
+			"level_min": 24,
+            "species": "SPECIES_GEODUDE",
+			"weight": 10
         },
         {
-            "level": 23,
-            "species": "SPECIES_GEODUDE"
+            "level_max": 23,
+			"level_min": 23,
+            "species": "SPECIES_GEODUDE",
+			"weight": 10
         },
         {
-            "level": 25,
-            "species": "SPECIES_GEODUDE"
+            "level_max": 25,
+			"level_min": 25,
+            "species": "SPECIES_GEODUDE",
+			"weight": 10
         },
         {
-            "level": 25,
-            "species": "SPECIES_GEODUDE"
+            "level_max": 25,
+			"level_min": 25,
+            "species": "SPECIES_GEODUDE",
+			"weight": 10
         },
         {
-            "level": 25,
-            "species": "SPECIES_HIPPOPOTAS"
+            "level_max": 25,
+			"level_min": 25,
+            "species": "SPECIES_HIPPOPOTAS",
+			"weight": 10
         },
         {
-            "level": 25,
-            "species": "SPECIES_GEODUDE"
+            "level_max": 25,
+			"level_min": 25,
+            "species": "SPECIES_GEODUDE",
+			"weight": 10
         },
         {
-            "level": 25,
-            "species": "SPECIES_HIPPOPOTAS"
+            "level_max": 25,
+			"level_min": 25,
+            "species": "SPECIES_HIPPOPOTAS",
+			"weight": 10
         },
         {
-            "level": 25,
-            "species": "SPECIES_GEODUDE"
+            "level_max": 25,
+			"level_min": 25,
+            "species": "SPECIES_GEODUDE",
+			"weight": 10
         },
         {
-            "level": 24,
-            "species": "SPECIES_HIPPOPOTAS"
+            "level_max": 24,
+			"level_min": 24,
+            "species": "SPECIES_HIPPOPOTAS",
+			"weight": 10
         },
         {
-            "level": 25,
-            "species": "SPECIES_GEODUDE"
+            "level_max": 25,
+			"level_min": 25,
+            "species": "SPECIES_GEODUDE",
+			"weight": 10
         },
         {
-            "level": 26,
-            "species": "SPECIES_HIPPOPOTAS"
+            "level_max": 26,
+			"level_min": 26,
+            "species": "SPECIES_HIPPOPOTAS",
+			"weight": 10
         }
     ],
     "swarms": [
@@ -99,27 +123,32 @@
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         },
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         },
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         },
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         },
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         }
     ],
     "old_rod_rate": 0,
@@ -127,27 +156,32 @@
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         },
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         },
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         },
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         },
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         }
     ],
     "good_rod_rate": 0,
@@ -155,27 +189,32 @@
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         },
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         },
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         },
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         },
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         }
     ],
     "super_rod_rate": 0,
@@ -183,27 +222,32 @@
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         },
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         },
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         },
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         },
         {
             "level_max": 0,
             "level_min": 0,
-            "species": "SPECIES_NONE"
+            "species": "SPECIES_NONE",
+			"weight": 10
         }
     ],
     "map_category": {

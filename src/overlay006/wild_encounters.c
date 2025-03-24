@@ -63,12 +63,6 @@ typedef struct RadarEncounterData {
     BOOL isRadarEncounter;
 } RadarEncounterData;
 
-typedef struct EncounterSlot {
-    int species;
-    u16 maxLevel;
-    u16 minLevel;
-} EncounterSlot;
-
 typedef struct WildEncounters_FieldParams {
     u32 trainerID;
     BOOL repelActive;
@@ -94,11 +88,11 @@ static BOOL FirstMonAbilityPreventsEncounter(const WildEncounters_FieldParams *e
 static int GetGrassEncounterRate(FieldSystem *fieldSystem);
 static int GetSurfEncounterRate(FieldSystem *fieldSystem);
 static int GetFishingEncounterRate(FieldSystem *fieldSystem, const int rodType);
-static BOOL TryGenerateGrassEncounter_WithRadar(FieldSystem *fieldSystem, Pokemon *firstMon, FieldBattleDTO *battleParams, WildEncounters *encounterData, EncounterSlot *encounterTable, const WildEncounters_FieldParams *fieldParams, const RadarEncounterData *radarData);
-static BOOL TryGenerateGrassEncounter_DoubleBattle(FieldSystem *fieldSystem, Pokemon *firstMon, FieldBattleDTO *battleParams, EncounterSlot *encounterTable, const WildEncounters_FieldParams *fieldParams);
-static BOOL TryGenerateSurfEncounter(FieldSystem *fieldSystem, Pokemon *param1, FieldBattleDTO *param2, EncounterSlot *param3, const WildEncounters_FieldParams *param4);
-static BOOL TryGenerateFishingEncounter(FieldSystem *fieldSystem, Pokemon *param1, FieldBattleDTO *param2, EncounterSlot *param3, const WildEncounters_FieldParams *param4, const int param5);
-static BOOL TryGenerateWildMon(Pokemon *firstPartyMon, const int fishingRodType, const WildEncounters_FieldParams *fieldParams, const EncounterSlot *encounterTable, const u8 encounterType, const int param5, FieldBattleDTO *param6);
+static BOOL TryGenerateGrassEncounter_WithRadar(FieldSystem *fieldSystem, Pokemon *firstMon, FieldBattleDTO *battleParams, WildEncounters *encounterData, EncounterSlot encounterTable[], const WildEncounters_FieldParams *fieldParams, const RadarEncounterData *radarData);
+static BOOL TryGenerateGrassEncounter_DoubleBattle(FieldSystem *fieldSystem, Pokemon *firstMon, FieldBattleDTO *battleParams, EncounterSlot encounterTable[], const WildEncounters_FieldParams *fieldParams);
+static BOOL TryGenerateSurfEncounter(FieldSystem *fieldSystem, Pokemon *param1, FieldBattleDTO *param2, EncounterSlot param3[], const WildEncounters_FieldParams *param4);
+static BOOL TryGenerateFishingEncounter(FieldSystem *fieldSystem, Pokemon *param1, FieldBattleDTO *param2, EncounterSlot param3[], const WildEncounters_FieldParams *param4, const int param5);
+static BOOL TryGenerateWildMon(Pokemon *firstPartyMon, const int fishingRodType, const WildEncounters_FieldParams *fieldParams, const EncounterSlot encounterTable[], const u8 encounterType, const int param5, FieldBattleDTO *param6);
 static BOOL CreateWildMon_FromRadarNoChain(FieldSystem *fieldSystem, Pokemon *param1, const WildEncounters_FieldParams *param2, const EncounterSlot *param3, const int param4, FieldBattleDTO *param5, const int param6, const int param7);
 static BOOL CreateWildMon_FromRadarKeepChain(const int species, const int level, const int partyDest, const BOOL isShiny, const u32 trainerId, const WildEncounters_FieldParams *fieldParams, Pokemon *mon, FieldBattleDTO *battleParams);
 static u8 ModifyEncounterRateWithFieldParams(const BOOL isFishingEncounter, const u8 encounterRate, const WildEncounters_FieldParams *fieldParams, const u32 weatherEffect, Pokemon *unused);
@@ -325,8 +319,9 @@ BOOL WildEncounters_TryWildEncounter(FieldSystem *fieldSystem)
     if (encounterType == ENCOUNTER_TYPE_GRASS) {
         for (int i = 0; i < MAX_GRASS_ENCOUNTERS; i++) {
             encounterTable[i].species = encounterData->grassEncounters.encounters[i].species;
-            encounterTable[i].maxLevel = encounterData->grassEncounters.encounters[i].level;
-            encounterTable[i].minLevel = encounterData->grassEncounters.encounters[i].level;
+            encounterTable[i].maxLevel = encounterData->grassEncounters.encounters[i].maxLevel;
+            encounterTable[i].minLevel = encounterData->grassEncounters.encounters[i].minLevel;
+            encounterTable[i].weight = encounterData->grassEncounters.encounters[i].weight;
         }
 
         BOOL nationalDexObtained = Pokedex_IsNationalDexObtained(SaveData_GetPokedex(FieldSystem_GetSaveData(fieldSystem)));
@@ -350,6 +345,7 @@ BOOL WildEncounters_TryWildEncounter(FieldSystem *fieldSystem)
             encounterTable[i].species = encounterData->surfEncounters.encounters[i].species;
             encounterTable[i].maxLevel = encounterData->surfEncounters.encounters[i].maxLevel;
             encounterTable[i].minLevel = encounterData->surfEncounters.encounters[i].minLevel;
+            encounterTable[i].weight = encounterData->grassEncounters.encounters[i].weight;
         }
 
         encounterSuccess = TryGenerateSurfEncounter(fieldSystem, firstPartyMon, battleParams, encounterTable, &encounterFieldParams);
@@ -417,7 +413,7 @@ BOOL WildEncounters_TryFishingEncounter(FieldSystem *fieldSystem, enum Encounter
             encounterTable[i].minLevel = minLevel;
         }
     } else {
-        WaterEncounter *fishingEncounters;
+        EncounterSlot *fishingEncounters;
         WildEncounters *encounterData = MapHeaderData_GetWildEncounters(fieldSystem);
 
         switch (fishingRodType) {
@@ -436,6 +432,7 @@ BOOL WildEncounters_TryFishingEncounter(FieldSystem *fieldSystem, enum Encounter
             encounterTable[i].species = fishingEncounters[i].species;
             encounterTable[i].maxLevel = fishingEncounters[i].maxLevel;
             encounterTable[i].minLevel = fishingEncounters[i].minLevel;
+            encounterTable[i].weight = fishingEncounters[i].weight;
         }
     }
 
@@ -512,8 +509,9 @@ BOOL WildEncounters_TrySweetScentEncounter(FieldSystem *fieldSystem, FieldTask *
     if (encounterType == ENCOUNTER_TYPE_GRASS) {
         for (int i = 0; i < MAX_GRASS_ENCOUNTERS; i++) {
             encounterTable[i].species = encounterData->grassEncounters.encounters[i].species;
-            encounterTable[i].maxLevel = encounterData->grassEncounters.encounters[i].level;
-            encounterTable[i].minLevel = encounterData->grassEncounters.encounters[i].level;
+            encounterTable[i].maxLevel = encounterData->grassEncounters.encounters[i].maxLevel;
+            encounterTable[i].minLevel = encounterData->grassEncounters.encounters[i].minLevel;
+            encounterTable[i].weight = encounterData->grassEncounters.encounters[i].weight;
         }
 
         BOOL nationalDexObtained = Pokedex_IsNationalDexObtained(SaveData_GetPokedex(FieldSystem_GetSaveData(fieldSystem)));
@@ -537,6 +535,7 @@ BOOL WildEncounters_TrySweetScentEncounter(FieldSystem *fieldSystem, FieldTask *
             encounterTable[i].species = encounterData->surfEncounters.encounters[i].species;
             encounterTable[i].maxLevel = encounterData->surfEncounters.encounters[i].maxLevel;
             encounterTable[i].minLevel = encounterData->surfEncounters.encounters[i].minLevel;
+            encounterTable[i].weight = encounterData->surfEncounters.encounters[i].weight;
         }
 
         encounterSuccess = TryGenerateSurfEncounter(fieldSystem, firstPartyMon, battleParams, encounterTable, &encounterFieldParams);
@@ -642,8 +641,9 @@ BOOL WildEncounters_TryMudEncounter(FieldSystem *fieldSystem, FieldBattleDTO **b
     if (encounterType == ENCOUNTER_TYPE_GRASS) {
         for (int i = 0; i < MAX_GRASS_ENCOUNTERS; i++) {
             encounterTable[i].species = encounterData->grassEncounters.encounters[i].species;
-            encounterTable[i].maxLevel = encounterData->grassEncounters.encounters[i].level;
-            encounterTable[i].minLevel = encounterData->grassEncounters.encounters[i].level;
+            encounterTable[i].maxLevel = encounterData->grassEncounters.encounters[i].maxLevel;
+            encounterTable[i].minLevel = encounterData->grassEncounters.encounters[i].minLevel;
+            encounterTable[i].weight = encounterData->grassEncounters.encounters[i].weight;
         }
 
         BOOL nationalDexObtained = Pokedex_IsNationalDexObtained(SaveData_GetPokedex(FieldSystem_GetSaveData(fieldSystem)));
@@ -685,7 +685,7 @@ BOOL WildEncounters_TryMudEncounter(FieldSystem *fieldSystem, FieldBattleDTO **b
 }
 
 // If using radar, adds radar encounters to table and tries to preserve the chain
-static BOOL TryGenerateGrassEncounter_WithRadar(FieldSystem *fieldSystem, Pokemon *firstPartyMon, FieldBattleDTO *battleParams, WildEncounters *encounterData, EncounterSlot *encounterTable, const WildEncounters_FieldParams *encounterFieldParams, const RadarEncounterData *radarData)
+static BOOL TryGenerateGrassEncounter_WithRadar(FieldSystem *fieldSystem, Pokemon *firstPartyMon, FieldBattleDTO *battleParams, WildEncounters *encounterData, EncounterSlot encounterTable[], const WildEncounters_FieldParams *encounterFieldParams, const RadarEncounterData *radarData)
 {
     BOOL encounterSuccess;
 
@@ -727,7 +727,7 @@ static BOOL TryGenerateGrassEncounter_WithRadar(FieldSystem *fieldSystem, Pokemo
     return encounterSuccess;
 }
 
-static BOOL TryGenerateGrassEncounter_DoubleBattle(FieldSystem *fieldSystem, Pokemon *firstPartyMon, FieldBattleDTO *battleParams, EncounterSlot *encounterTable, const WildEncounters_FieldParams *fieldParams)
+static BOOL TryGenerateGrassEncounter_DoubleBattle(FieldSystem *fieldSystem, Pokemon *firstPartyMon, FieldBattleDTO *battleParams, EncounterSlot encounterTable[], const WildEncounters_FieldParams *fieldParams)
 {
     if (!TryGenerateWildMon(firstPartyMon, 0xff, fieldParams, encounterTable, ENCOUNTER_TYPE_GRASS, 1, battleParams)) {
         return FALSE;
@@ -737,14 +737,14 @@ static BOOL TryGenerateGrassEncounter_DoubleBattle(FieldSystem *fieldSystem, Pok
     return encounterSuccess;
 }
 
-static BOOL TryGenerateSurfEncounter(FieldSystem *fieldSystem, Pokemon *param1, FieldBattleDTO *param2, EncounterSlot *param3, const WildEncounters_FieldParams *param4)
+static BOOL TryGenerateSurfEncounter(FieldSystem *fieldSystem, Pokemon *mon, FieldBattleDTO *param2, EncounterSlot encounterTable[], const WildEncounters_FieldParams *param4)
 {
-    return TryGenerateWildMon(param1, 0xff, param4, param3, ENCOUNTER_TYPE_SURF, 1, param2);
+    return TryGenerateWildMon(mon, 0xff, param4, encounterTable, ENCOUNTER_TYPE_SURF, 1, param2);
 }
 
-static BOOL TryGenerateFishingEncounter(FieldSystem *fieldSystem, Pokemon *param1, FieldBattleDTO *param2, EncounterSlot *param3, const WildEncounters_FieldParams *param4, const int fishingRodType)
+static BOOL TryGenerateFishingEncounter(FieldSystem *fieldSystem, Pokemon *mon, FieldBattleDTO *param2, EncounterSlot encounterTable[], const WildEncounters_FieldParams *param4, const int fishingRodType)
 {
-    return TryGenerateWildMon(param1, fishingRodType, param4, param3, ENCOUNTER_TYPE_FISHING, 1, param2);
+    return TryGenerateWildMon(mon, fishingRodType, param4, encounterTable, ENCOUNTER_TYPE_FISHING, 1, param2);
 }
 
 static BOOL ShouldGetRandomEncounter(FieldSystem *fieldSystem, const u32 encounterRate, const u8 tileBehavior)
@@ -817,105 +817,27 @@ static BOOL CheckEncounterRateSuccess(FieldSystem *fieldSystem, u32 encounterRat
     }
 }
 
-static u8 GetGroundEncounterSlot(void)
+// Would be nice to replace with Walker-Vose alias method,
+// but that would require a ton of restructuring,
+// and really wouldn't offer that much improvement
+static u8 GetEncounterSlotFromTable(const EncounterSlot encounterTable[], int tableSize)
 {
-    u8 roll = LCRNG_RandMod(100);
-
-    if (roll < 20) {
-        return 0;
-    } else if (roll >= 20 && roll < 40) {
-        return 1;
-    } else if (roll >= 40 && roll < 50) {
-        return 2;
-    } else if (roll >= 50 && roll < 60) {
-        return 3;
-    } else if (roll >= 60 && roll < 70) {
-        return 4;
-    } else if (roll >= 70 && roll < 80) {
-        return 5;
-    } else if (roll >= 80 && roll < 85) {
-        return 6;
-    } else if (roll >= 85 && roll < 90) {
-        return 7;
-    } else if (roll >= 90 && roll < 94) {
-        return 8;
-    } else if (roll >= 94 && roll < 98) {
-        return 9;
-    } else if (roll == 98) {
-        return 10;
+    int i, totalWeight = 0;
+    for (i = 0; i < tableSize; ++i) {
+        totalWeight += encounterTable[i].weight;
     }
 
-    return 11;
-}
+    int roll = LCRNG_RandMod(totalWeight);
 
-static u8 GetWaterEncounterSlot(void)
-{
-    u8 roll = LCRNG_RandMod(100);
-
-    if (roll < 60) {
-        return 0;
-    } else if (roll >= 60 && roll < 90) {
-        return 1;
-    } else if (roll >= 90 && roll < 95) {
-        return 2;
-    } else if (roll >= 95 && roll < 99) {
-        return 3;
+    int weightChecked = 0;
+    for ( i = 0; i < tableSize; ++i) {
+        weightChecked += encounterTable[i].weight;
+        if (roll < weightChecked) {
+            return i;
+        }
     }
 
-    return 4;
-}
-
-static u8 GetRodEncounterSlot(const int fishingRodType)
-{
-    u8 encSlot = 0;
-
-    u8 roll = LCRNG_RandMod(100);
-
-    switch (fishingRodType) {
-    case FISHING_TYPE_OLD_ROD:
-        if (roll < 60) {
-            encSlot = 0;
-        } else if (roll < 90) {
-            encSlot = 1;
-        } else if (roll < 95) {
-            encSlot = 2;
-        } else if (roll < 99) {
-            encSlot = 3;
-        } else {
-            encSlot = 4;
-        }
-        break;
-    case FISHING_TYPE_GOOD_ROD:
-        if (roll < 40) {
-            encSlot = 0;
-        } else if (roll < 80) {
-            encSlot = 1;
-        } else if (roll < 95) {
-            encSlot = 2;
-        } else if (roll < 99) {
-            encSlot = 3;
-        } else {
-            encSlot = 4;
-        }
-        break;
-    case FISHING_TYPE_SUPER_ROD:
-        if (roll < 40) {
-            encSlot = 0;
-        } else if (roll < 80) {
-            encSlot = 1;
-        } else if (roll < 95) {
-            encSlot = 2;
-        } else if (roll < 99) {
-            encSlot = 3;
-        } else {
-            encSlot = 4;
-        }
-        break;
-    default:
-        GF_ASSERT(FALSE);
-    }
-
-    return encSlot;
+    return 0;
 }
 
 static void ModifyEncounterRateWithHeldItem(Pokemon *mon, u8 *encounterRate)
@@ -1086,7 +1008,7 @@ static void CreateWildMon(u16 species, u8 level, const int partyDest, const Wild
     Heap_Free(newEncounter);
 }
 
-static BOOL TryGenerateWildMon(Pokemon *firstPartyMon, const int fishingRodType, const WildEncounters_FieldParams *encounterFieldParams, const EncounterSlot *encounterTable, const u8 encounterType, const int partyDest, FieldBattleDTO *battleParams)
+static BOOL TryGenerateWildMon(Pokemon *firstPartyMon, const int fishingRodType, const WildEncounters_FieldParams *encounterFieldParams, const EncounterSlot encounterTable[], const u8 encounterType, const int partyDest, FieldBattleDTO *battleParams)
 {
     BOOL forcedSlot;
     u8 encounterSlot = 0;
@@ -1100,31 +1022,35 @@ static BOOL TryGenerateWildMon(Pokemon *firstPartyMon, const int fishingRodType,
             forcedSlot = TryGetSlotForTypeMatchAbility(firstPartyMon, encounterFieldParams, encounterTable, MAX_GRASS_ENCOUNTERS, TYPE_ELECTRIC, ABILITY_STATIC, &encounterSlot);
 
             if (!forcedSlot) {
-                encounterSlot = GetGroundEncounterSlot();
+                encounterSlot = GetEncounterSlotFromTable(encounterTable, MAX_GRASS_ENCOUNTERS);
             }
         }
 
-        encounterSlot = TryFindHigherLevelSlot(encounterTable, encounterFieldParams, encounterSlot);
+        encounterSlot = TryFindHigherLevelSlot(encounterTable, encounterFieldParams, encounterSlot); // Make this obsolete; it should work the same as water slots
         level = encounterTable[encounterSlot].maxLevel;
         break;
     case ENCOUNTER_TYPE_SURF:
-        // BUG: Magnet Pull doesn't function in water because its encounter slot gets overwritten when the Static check returns FALSE.
         forcedSlot = TryGetSlotForTypeMatchAbility(firstPartyMon, encounterFieldParams, encounterTable, MAX_WATER_ENCOUNTERS, TYPE_STEEL, ABILITY_MAGNET_PULL, &encounterSlot);
-        forcedSlot = TryGetSlotForTypeMatchAbility(firstPartyMon, encounterFieldParams, encounterTable, MAX_WATER_ENCOUNTERS, TYPE_ELECTRIC, ABILITY_STATIC, &encounterSlot);
 
         if (!forcedSlot) {
-            encounterSlot = GetWaterEncounterSlot();
+            forcedSlot = TryGetSlotForTypeMatchAbility(firstPartyMon, encounterFieldParams, encounterTable, MAX_WATER_ENCOUNTERS, TYPE_ELECTRIC, ABILITY_STATIC, &encounterSlot);
+        }
+
+        if (!forcedSlot) {
+            encounterSlot = GetEncounterSlotFromTable(encounterTable, MAX_WATER_ENCOUNTERS);
         }
 
         level = GetWildMonLevel(&encounterTable[encounterSlot], encounterFieldParams);
         break;
     case ENCOUNTER_TYPE_FISHING:
-        // BUG: Magnet Pull doesn't function in water because its encounter slot gets overwritten when the Static check returns FALSE.
         forcedSlot = TryGetSlotForTypeMatchAbility(firstPartyMon, encounterFieldParams, encounterTable, MAX_WATER_ENCOUNTERS, TYPE_STEEL, ABILITY_MAGNET_PULL, &encounterSlot);
-        forcedSlot = TryGetSlotForTypeMatchAbility(firstPartyMon, encounterFieldParams, encounterTable, MAX_WATER_ENCOUNTERS, TYPE_ELECTRIC, ABILITY_STATIC, &encounterSlot);
 
         if (!forcedSlot) {
-            encounterSlot = GetRodEncounterSlot(fishingRodType);
+            forcedSlot = TryGetSlotForTypeMatchAbility(firstPartyMon, encounterFieldParams, encounterTable, MAX_WATER_ENCOUNTERS, TYPE_ELECTRIC, ABILITY_STATIC, &encounterSlot);
+        }
+
+        if (!forcedSlot) {
+            encounterSlot = GetEncounterSlotFromTable(encounterTable, MAX_WATER_ENCOUNTERS);
         }
 
         level = GetWildMonLevel(&encounterTable[encounterSlot], encounterFieldParams);
@@ -1171,7 +1097,7 @@ static BOOL CreateWildMon_FromRadarNoChain(FieldSystem *fieldSystem, Pokemon *mo
         forcedSlot = TryGetSlotForTypeMatchAbility(mon, encounterFieldParams, encounterTable, MAX_GRASS_ENCOUNTERS, TYPE_ELECTRIC, ABILITY_STATIC, &encounterSlot);
 
         if (forcedSlot == 0) {
-            encounterSlot = GetGroundEncounterSlot();
+            encounterSlot = GetEncounterSlotFromTable(encounterTable, MAX_GRASS_ENCOUNTERS);
         }
     }
 

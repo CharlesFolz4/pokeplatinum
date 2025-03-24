@@ -5,27 +5,21 @@
 
 #include "field/field_system_decl.h"
 
-typedef struct GrassEncounter {
-    s8 level;
-    u8 padding_01[3];
+typedef struct EncounterSlot {
+    s8 maxLevel;
+    s8 minLevel;
+    u16 weight;
     int species;
-} GrassEncounter;
+} EncounterSlot;
 
 typedef struct GrassEncounters {
     int encounterRate;
-    GrassEncounter encounters[MAX_GRASS_ENCOUNTERS];
+    EncounterSlot encounters[MAX_GRASS_ENCOUNTERS];
 } GrassEncounters;
 
-typedef struct WaterEncounter {
-    s8 maxLevel;
-    s8 minLevel;
-    u8 padding_02[2];
-    int species;
-
-} WaterEncounter;
 typedef struct WaterEncounters {
     int encounterRate;
-    WaterEncounter encounters[MAX_WATER_ENCOUNTERS];
+    EncounterSlot encounters[MAX_WATER_ENCOUNTERS];
 } WaterEncounters;
 
 typedef struct WildEncounters {
