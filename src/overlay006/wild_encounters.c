@@ -20,7 +20,6 @@
 #include "field/field_system_sub2_t.h"
 #include "overlay005/honey_tree.h"
 #include "overlay006/dual_slot_encounters.h"
-#include "overlay006/feebas_fishing.h"
 #include "overlay006/great_marsh_daily_encounters.h"
 #include "overlay006/special_dates.h"
 #include "overlay006/swarm.h"
@@ -400,40 +399,26 @@ BOOL WildEncounters_TryFishingEncounter(FieldSystem *fieldSystem, enum Encounter
     FieldBattleDTO_Init(*battleParams, fieldSystem);
     FieldBattleDTO_SetWaterTerrain(*battleParams);
 
-    if (MapHeader_HasFeebasTiles(fieldSystem->location->mapId) && PlayerAvatar_IsFacingFeebasTile(fieldSystem)) {
-        int species;
-        u8 maxLevel, minLevel;
+    EncounterSlot *fishingEncounters;
+    WildEncounters *encounterData = MapHeaderData_GetWildEncounters(fieldSystem);
 
-        LoadFeebasLevelRange(&maxLevel, &minLevel); // 10-20
-        LoadFeebasFromNARC(&species);
+    switch (fishingRodType) {
+    case FISHING_TYPE_OLD_ROD:
+        fishingEncounters = encounterData->oldRodEncounters.encounters;
+        break;
+    case FISHING_TYPE_GOOD_ROD:
+        fishingEncounters = encounterData->goodRodEncounters.encounters;
+        break;
+    case FISHING_TYPE_SUPER_ROD:
+        fishingEncounters = encounterData->superRodEncounters.encounters;
+        break;
+    }
 
-        for (u8 i = 0; i < MAX_WATER_ENCOUNTERS; i++) { // guaranteed to find Feebas if the above checks pass.
-            encounterTable[i].species = species;
-            encounterTable[i].maxLevel = maxLevel;
-            encounterTable[i].minLevel = minLevel;
-        }
-    } else {
-        EncounterSlot *fishingEncounters;
-        WildEncounters *encounterData = MapHeaderData_GetWildEncounters(fieldSystem);
-
-        switch (fishingRodType) {
-        case FISHING_TYPE_OLD_ROD:
-            fishingEncounters = encounterData->oldRodEncounters.encounters;
-            break;
-        case FISHING_TYPE_GOOD_ROD:
-            fishingEncounters = encounterData->goodRodEncounters.encounters;
-            break;
-        case FISHING_TYPE_SUPER_ROD:
-            fishingEncounters = encounterData->superRodEncounters.encounters;
-            break;
-        }
-
-        for (u8 i = 0; i < MAX_WATER_ENCOUNTERS; i++) {
-            encounterTable[i].species = fishingEncounters[i].species;
-            encounterTable[i].maxLevel = fishingEncounters[i].maxLevel;
-            encounterTable[i].minLevel = fishingEncounters[i].minLevel;
-            encounterTable[i].weight = fishingEncounters[i].weight;
-        }
+    for (u8 i = 0; i < MAX_WATER_ENCOUNTERS; i++) {
+        encounterTable[i].species = fishingEncounters[i].species;
+        encounterTable[i].maxLevel = fishingEncounters[i].maxLevel;
+        encounterTable[i].minLevel = fishingEncounters[i].minLevel;
+        encounterTable[i].weight = fishingEncounters[i].weight;
     }
 
     if (!TryGenerateFishingEncounter(fieldSystem, firstPartyMon, *battleParams, encounterTable, &encounterFieldParams, fishingRodType)) {

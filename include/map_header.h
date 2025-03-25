@@ -58,7 +58,6 @@ BOOL MapHeader_IsBuilding(u32 headerID);
 BOOL MapHeader_IsOutdoors(u32 headerID);
 BOOL MapHeader_IsPokemonCenter2(u32 headerID);
 BOOL MapHeader_IsUnionRoom(const u32 headerID);
-BOOL MapHeader_HasFeebasTiles(const u32 headerID);
 BOOL MapHeader_IsTrophyGarden(const u32 headerID);
 BOOL MapHeader_IsAmitySquare(const u32 headerID);
 BOOL MapHeader_IsAzureFluteAllowed(const u32 headerID);
