@@ -188,11 +188,6 @@ BOOL MapHeader_IsUnionRoom(const u32 headerID)
     return headerID == MAP_HEADER_UNION_ROOM;
 }
 
-BOOL MapHeader_HasFeebasTiles(const u32 headerID)
-{
-    return headerID == MAP_HEADER_MT_CORONET_B1F;
-}
-
 BOOL MapHeader_IsTrophyGarden(const u32 headerID)
 {
     return headerID == MAP_HEADER_TROPHY_GARDEN;

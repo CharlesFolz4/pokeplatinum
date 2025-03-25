@@ -469,7 +469,6 @@ pokeplatinum_c = files(
     'overlay006/pc_animation.c',
     'overlay006/field_warp.c',
     'overlay006/trophy_garden_daily_encounters.c',
-    'overlay006/feebas_fishing.c',
     'overlay006/dual_slot_encounters.c',
     'overlay006/ov6_02247830.c',
     'overlay006/link_contest_record_display.c',

@@ -581,7 +581,6 @@ Overlay overlay6
 	Object main.nef.p/src_overlay006_pc_animation.c.o
 	Object main.nef.p/src_overlay006_field_warp.c.o
 	Object main.nef.p/src_overlay006_trophy_garden_daily_encounters.c.o
-	Object main.nef.p/src_overlay006_feebas_fishing.c.o
 	Object main.nef.p/src_overlay006_dual_slot_encounters.c.o
 	Object main.nef.p/src_overlay006_ov6_02247830.c.o
 	Object main.nef.p/src_overlay006_link_contest_record_display.c.o
