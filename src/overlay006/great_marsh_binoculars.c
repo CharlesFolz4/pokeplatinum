@@ -20,9 +20,11 @@
 #include "pokedex.h"
 #include "special_encounter.h"
 
+//TODO: later, low priority
 int GreatMarshBinoculars_GetMonSpecies(FieldSystem *fieldSystem)
 {
     int encounterTable[MAX_GRASS_ENCOUNTERS];
+    //EncounterSlot encounterTable[MAX_GRASS_ENCOUNTERS];
 
     WildEncounters *encounterData = MapHeaderData_GetWildEncounters(fieldSystem);
 
@@ -33,7 +35,7 @@ int GreatMarshBinoculars_GetMonSpecies(FieldSystem *fieldSystem)
     BOOL natDexObtained = Pokedex_IsNationalDexObtained(SaveData_GetPokedex(FieldSystem_GetSaveData(fieldSystem)));
 
     ReplaceGreatMarshDailyEncounters(SpecialEncounter_GetDailyMon(SaveData_GetSpecialEncounters(fieldSystem->saveData), DAILY_MARSH), natDexObtained, fieldSystem->location->mapId, &encounterTable[6], &encounterTable[7]);
-    WildEncounters_ReplaceTimedEncounters(encounterData, &encounterTable[2], &encounterTable[3]);
+    //WildEncounters_UpdateTimedEncounters(encounterData, encounterTable);
     WildEncounters_ReplaceDualSlotEncounters(encounterData, natDexObtained, &encounterTable[8], &encounterTable[9]);
 
     return encounterTable[LCRNG_RandMod(MAX_GRASS_ENCOUNTERS)];

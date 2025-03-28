@@ -172,17 +172,53 @@ static const UnownFormsGroup WildEncounters_UnownTables[] = {
 };
 
 // Default encounters are morning. They get replaced by this if it is not morning.
-void WildEncounters_ReplaceTimedEncounters(const WildEncounters *encounterData, int *timedSlot1, int *timedSlot2)
+void WildEncounters_UpdateTimedEncounters(const WildEncounters *encounterData, EncounterSlot encounterTable[])
 {
     int timeOfDay = GetTimeOfDay();
-
-    if (timeOfDay == TIMEOFDAY_DAY || timeOfDay == TIMEOFDAY_TWILIGHT) {
-        *timedSlot1 = encounterData->dayEncounters[0];
-        *timedSlot2 = encounterData->dayEncounters[1];
-    } else if (timeOfDay == TIMEOFDAY_NIGHT || timeOfDay == TIMEOFDAY_LATE_NIGHT) {
-        *timedSlot1 = encounterData->nightEncounters[0];
-        *timedSlot2 = encounterData->nightEncounters[1];
+    if (timeOfDay == TIMEOFDAY_MORNING) {
+        return;
     }
+
+    int i, totalWeight = 0;
+    for (i = 0; i < MAX_GRASS_ENCOUNTERS; ++i) {
+        totalWeight += encounterTable[i].weight;
+    }
+
+    int slot;
+    for(i = 0; i < MAX_GRASS_ENCOUNTERS-1; ++i){
+        if (encounterTable[i].species == SPECIES_NONE || encounterTable[i].weight == 0){
+
+            encounterTable[i].maxLevel = encounterTable[i-1].maxLevel;
+            encounterTable[i+1].maxLevel = encounterTable[i-1].maxLevel;
+            encounterTable[i].minLevel = encounterTable[i-1].minLevel;
+            encounterTable[i+1].minLevel = encounterTable[i-1].minLevel;
+            if (timeOfDay == TIMEOFDAY_DAY || timeOfDay == TIMEOFDAY_TWILIGHT) {
+                encounterTable[i].species = encounterData->dayEncounters[0];
+                encounterTable[i+1].species = encounterData->dayEncounters[1];
+            } else if (timeOfDay == TIMEOFDAY_NIGHT || timeOfDay == TIMEOFDAY_LATE_NIGHT) {
+                encounterTable[i].species = encounterData->nightEncounters[0];
+                encounterTable[i+1].species = encounterData->nightEncounters[1];
+            }
+            encounterTable[i].weight = totalWeight * 0.2;
+            encounterTable[i+1].weight = totalWeight * 0.2;
+            return;
+        }
+    }
+
+    encounterTable[MAX_GRASS_ENCOUNTERS-1].maxLevel = encounterTable[0].maxLevel;
+    encounterTable[MAX_GRASS_ENCOUNTERS-2].maxLevel = encounterTable[0].maxLevel;
+    encounterTable[MAX_GRASS_ENCOUNTERS-1].minLevel = encounterTable[0].minLevel;
+    encounterTable[MAX_GRASS_ENCOUNTERS-2].minLevel = encounterTable[0].minLevel;
+    if (timeOfDay == TIMEOFDAY_DAY || timeOfDay == TIMEOFDAY_TWILIGHT) {
+        encounterTable[MAX_GRASS_ENCOUNTERS-1].species = encounterData->dayEncounters[0];
+        encounterTable[MAX_GRASS_ENCOUNTERS-2].species = encounterData->dayEncounters[1];
+    } else if (timeOfDay == TIMEOFDAY_NIGHT || timeOfDay == TIMEOFDAY_LATE_NIGHT) {
+        encounterTable[MAX_GRASS_ENCOUNTERS-1].species = encounterData->nightEncounters[0];
+        encounterTable[MAX_GRASS_ENCOUNTERS-2].species = encounterData->nightEncounters[1];
+    }
+    encounterTable[MAX_GRASS_ENCOUNTERS-1].weight = totalWeight * 0.2;
+    encounterTable[MAX_GRASS_ENCOUNTERS-2].weight = totalWeight * 0.2;
+
 }
 
 static void WildEncounters_ReplaceSwarmEncounters(FieldSystem *fieldSystem, const WildEncounters *encounterData, int *radarSlot1, int *radarSlot2)
@@ -262,11 +298,7 @@ BOOL WildEncounters_TryWildEncounter(FieldSystem *fieldSystem)
     ModifyEncounterRateWithFlute(fieldSystem, &encounterRate);
     ModifyEncounterRateWithHeldItem(firstPartyMon, &encounterRate);
 
-    if (ShouldGetRandomEncounter(fieldSystem, encounterRate, tileBehavior)) {
-        gettingEncounter = TRUE;
-    } else {
-        gettingEncounter = FALSE;
-    }
+    gettingEncounter = ShouldGetRandomEncounter(fieldSystem, encounterRate, tileBehavior);
 
     memset(&radarData, 0, sizeof(RadarEncounterData));
 
@@ -281,11 +313,7 @@ BOOL WildEncounters_TryWildEncounter(FieldSystem *fieldSystem)
         return FALSE;
     }
 
-    if (SystemFlag_CheckHasPartner(SaveData_GetVarsFlags(fieldSystem->saveData))) {
-        withPartner = TRUE;
-    } else {
-        withPartner = FALSE;
-    }
+    withPartner = SystemFlag_CheckHasPartner(SaveData_GetVarsFlags(fieldSystem->saveData));
 
     // Roamers can't appear in Poke Radar patches or double battles.
     if (!withPartner && !radarData.isRadarEncounter) {
@@ -325,8 +353,9 @@ BOOL WildEncounters_TryWildEncounter(FieldSystem *fieldSystem)
 
         BOOL nationalDexObtained = Pokedex_IsNationalDexObtained(SaveData_GetPokedex(FieldSystem_GetSaveData(fieldSystem)));
 
-        WildEncounters_ReplaceTimedEncounters(encounterData, &encounterTable[2].species, &encounterTable[3].species);
-        WildEncounters_ReplaceSwarmEncounters(fieldSystem, encounterData, &encounterTable[0].species, &encounterTable[1].species);
+        WildEncounters_UpdateTimedEncounters(encounterData, encounterTable);
+
+        WildEncounters_ReplaceSwarmEncounters(fieldSystem, encounterData, &encounterTable[2].species, &encounterTable[3].species);
         WildEncounters_ReplaceTrophyGardenEncounters(fieldSystem, nationalDexObtained, &encounterTable[6].species, &encounterTable[7].species);
         WildEncounters_ReplaceDualSlotEncounters(encounterData, nationalDexObtained, &encounterTable[8].species, &encounterTable[9].species);
 
@@ -501,7 +530,7 @@ BOOL WildEncounters_TrySweetScentEncounter(FieldSystem *fieldSystem, FieldTask *
 
         BOOL nationalDexObtained = Pokedex_IsNationalDexObtained(SaveData_GetPokedex(FieldSystem_GetSaveData(fieldSystem)));
 
-        WildEncounters_ReplaceTimedEncounters(encounterData, &encounterTable[2].species, &encounterTable[3].species);
+        WildEncounters_UpdateTimedEncounters(encounterData, encounterTable);
         WildEncounters_ReplaceSwarmEncounters(fieldSystem, encounterData, &encounterTable[0].species, &encounterTable[1].species);
         WildEncounters_ReplaceTrophyGardenEncounters(fieldSystem, nationalDexObtained, &encounterTable[6].species, &encounterTable[7].species);
         WildEncounters_ReplaceDualSlotEncounters(encounterData, nationalDexObtained, &encounterTable[8].species, &encounterTable[9].species);
@@ -633,7 +662,7 @@ BOOL WildEncounters_TryMudEncounter(FieldSystem *fieldSystem, FieldBattleDTO **b
 
         BOOL nationalDexObtained = Pokedex_IsNationalDexObtained(SaveData_GetPokedex(FieldSystem_GetSaveData(fieldSystem)));
 
-        WildEncounters_ReplaceTimedEncounters(encounterData, &encounterTable[2].species, &encounterTable[3].species);
+        WildEncounters_UpdateTimedEncounters(encounterData, encounterTable);
         WildEncounters_ReplaceSwarmEncounters(fieldSystem, encounterData, &encounterTable[0].species, &encounterTable[1].species);
         WildEncounters_ReplaceTrophyGardenEncounters(fieldSystem, nationalDexObtained, &encounterTable[6].species, &encounterTable[7].species);
         WildEncounters_ReplaceDualSlotEncounters(encounterData, nationalDexObtained, &encounterTable[8].species, &encounterTable[9].species);
