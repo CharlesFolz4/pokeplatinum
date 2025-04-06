@@ -2,95 +2,95 @@
     "land_rate": 10,
     "land_encounters": [
         {
-            "level_max": 19,
-			"level_min": 19,
-            "species": "SPECIES_GASTLY",
-			"weight": 10
-        },
-        {
-            "level_max": 18,
+            "level_max": 21,
 			"level_min": 18,
-            "species": "SPECIES_ZUBAT",
-			"weight": 10
+            "species": "SPECIES_GASTLY",
+			"weight": 30
         },
         {
             "level_max": 20,
-			"level_min": 20,
-            "species": "SPECIES_GASTLY",
-			"weight": 10
-        },
-        {
-            "level_max": 18,
 			"level_min": 18,
-            "species": "SPECIES_GASTLY",
-			"weight": 10
-        },
-        {
-            "level_max": 19,
-			"level_min": 19,
-            "species": "SPECIES_ZUBAT",
-			"weight": 10
-        },
-        {
-            "level_max": 18,
-			"level_min": 18,
-            "species": "SPECIES_GASTLY",
-			"weight": 10
+            "species": "SPECIES_DUSKULL",
+			"weight": 20
         },
         {
             "level_max": 20,
-			"level_min": 20,
-            "species": "SPECIES_ZUBAT",
-			"weight": 10
+			"level_min": 18,
+            "species": "SPECIES_SHUPPET",
+			"weight": 15
+        },
+        {
+            "level_max": 20,
+			"level_min": 18,
+            "species": "SPECIES_MISDREAVUS",
+			"weight": 15
+        },
+        {
+            "level_max": 20,
+			"level_min": 18,
+            "species": "SPECIES_MURKROW",
+			"weight": 15
         },
         {
             "level_max": 21,
-			"level_min": 21,
-            "species": "SPECIES_GASTLY",
-			"weight": 10
-        },
-        {
-            "level_max": 21,
-			"level_min": 21,
-            "species": "SPECIES_GASTLY",
-			"weight": 10
-        },
-        {
-            "level_max": 21,
-			"level_min": 21,
-            "species": "SPECIES_GASTLY",
-			"weight": 10
-        },
-        {
-            "level_max": 21,
-			"level_min": 21,
-            "species": "SPECIES_GASTLY",
-			"weight": 10
-        },
-        {
-            "level_max": 21,
-			"level_min": 21,
+			"level_min": 19,
             "species": "SPECIES_GOLBAT",
-			"weight": 10
+			"weight": 5
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [
         "SPECIES_GASTLY",
-        "SPECIES_ZUBAT"
+        "SPECIES_DUSKULL"
     ],
     "day": [
         "SPECIES_GASTLY",
-        "SPECIES_GASTLY"
+        "SPECIES_MURKROW"
     ],
     "night": [
         "SPECIES_DUSKULL",
-        "SPECIES_DUSKULL"
+        "SPECIES_MURKROW"
     ],
     "radar": [
         "SPECIES_ZUBAT",
         "SPECIES_GASTLY",
-        "SPECIES_GASTLY",
-        "SPECIES_GASTLY"
+        "SPECIES_DUSKULL",
+        "SPECIES_MISDREAVUS"
     ],
     "rate_form0": 100,
     "rate_form1": 100,

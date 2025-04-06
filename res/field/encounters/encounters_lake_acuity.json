@@ -2,76 +2,76 @@
     "land_rate": 30,
     "land_encounters": [
         {
-            "level_max": 38,
+            "level_max": 41,
 			"level_min": 38,
             "species": "SPECIES_SNOVER",
-			"weight": 10
+			"weight": 30
         },
         {
-            "level_max": 39,
+            "level_max": 40,
 			"level_min": 39,
             "species": "SPECIES_BIBAREL",
-			"weight": 10
-        },
-        {
-            "level_max": 39,
-			"level_min": 39,
-            "species": "SPECIES_SNOVER",
-			"weight": 10
-        },
-        {
-            "level_max": 40,
-			"level_min": 40,
-            "species": "SPECIES_SNOVER",
-			"weight": 10
-        },
-        {
-            "level_max": 40,
-			"level_min": 40,
-            "species": "SPECIES_GOLDUCK",
-			"weight": 10
+			"weight": 5
         },
         {
             "level_max": 41,
-			"level_min": 41,
-            "species": "SPECIES_SNEASEL",
-			"weight": 10
-        },
-        {
-            "level_max": 39,
-			"level_min": 39,
-            "species": "SPECIES_GOLDUCK",
-			"weight": 10
-        },
-        {
-            "level_max": 38,
 			"level_min": 38,
-            "species": "SPECIES_PSYDUCK",
-			"weight": 10
+            "species": "SPECIES_URSARING",
+			"weight": 20
         },
         {
             "level_max": 41,
-			"level_min": 41,
-            "species": "SPECIES_SNOVER",
-			"weight": 10
-        },
-        {
-            "level_max": 40,
-			"level_min": 40,
-            "species": "SPECIES_BIBAREL",
-			"weight": 10
+			"level_min": 38,
+            "species": "SPECIES_STANTLER",
+			"weight": 20
         },
         {
             "level_max": 41,
-			"level_min": 41,
-            "species": "SPECIES_SNOVER",
-			"weight": 10
+			"level_min": 38,
+            "species": "SPECIES_SEALEO",
+			"weight": 15
         },
         {
-            "level_max": 40,
-			"level_min": 40,
-            "species": "SPECIES_BIBAREL",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [
@@ -79,12 +79,12 @@
         "SPECIES_BIBAREL"
     ],
     "day": [
-        "SPECIES_SNOVER",
-        "SPECIES_SNOVER"
+        "SPECIES_SEALEO",
+        "SPECIES_SEALEO"
     ],
     "night": [
-        "SPECIES_SNORUNT",
-        "SPECIES_SNORUNT"
+        "SPECIES_MIGHTYENA",
+        "SPECIES_MIGHTYENA"
     ],
     "radar": [
         "SPECIES_GOLDUCK",
@@ -129,7 +129,13 @@
         {
             "level_max": 30,
             "level_min": 20,
-            "species": "SPECIES_PSYDUCK",
+            "species": "SPECIES_SEALEO",
+			"weight": 10
+        },
+        {
+            "level_max": 50,
+            "level_min": 40,
+            "species": "SPECIES_WALREIN",
 			"weight": 10
         },
         {
@@ -139,16 +145,10 @@
 			"weight": 10
         },
         {
-            "level_max": 40,
-            "level_min": 20,
-            "species": "SPECIES_GOLDUCK",
-			"weight": 10
-        },
-        {
-            "level_max": 40,
-            "level_min": 20,
-            "species": "SPECIES_GOLDUCK",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "old_rod_rate": 25,
@@ -184,7 +184,7 @@
 			"weight": 10
         }
     ],
-    "good_rod_rate": 50,
+    "good_rod_rate": 100,
     "good_rod_encounters": [
         {
             "level_max": 20,
@@ -201,13 +201,13 @@
         {
             "level_max": 25,
             "level_min": 10,
-            "species": "SPECIES_MAGIKARP",
+            "species": "SPECIES_SHELLDER",
 			"weight": 10
         },
         {
             "level_max": 35,
             "level_min": 25,
-            "species": "SPECIES_SEAKING",
+            "species": "SPECIES_CLOYSTER",
 			"weight": 10
         },
         {

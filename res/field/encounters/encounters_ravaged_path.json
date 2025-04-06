@@ -2,76 +2,76 @@
     "land_rate": 10,
     "land_encounters": [
         {
-            "level_max": 4,
-			"level_min": 4,
-            "species": "SPECIES_ZUBAT",
-			"weight": 10
-        },
-        {
-            "level_max": 4,
-			"level_min": 4,
-            "species": "SPECIES_PSYDUCK",
-			"weight": 10
-        },
-        {
-            "level_max": 5,
-			"level_min": 5,
-            "species": "SPECIES_ZUBAT",
-			"weight": 10
-        },
-        {
-            "level_max": 5,
-			"level_min": 5,
-            "species": "SPECIES_PSYDUCK",
-			"weight": 10
-        },
-        {
-            "level_max": 3,
+            "level_max": 6,
 			"level_min": 3,
             "species": "SPECIES_ZUBAT",
-			"weight": 10
-        },
-        {
-            "level_max": 3,
-			"level_min": 3,
-            "species": "SPECIES_ZUBAT",
-			"weight": 10
+			"weight": 20
         },
         {
             "level_max": 6,
-			"level_min": 6,
+			"level_min": 4,
             "species": "SPECIES_PSYDUCK",
+			"weight": 20
+        },
+        {
+            "level_max": 7,
+			"level_min": 4,
+            "species": "SPECIES_SPINARAK",
+			"weight": 30
+        },
+        {
+            "level_max": 7,
+			"level_min": 5,
+            "species": "SPECIES_SHUCKLE",
 			"weight": 10
         },
         {
-            "level_max": 6,
-			"level_min": 6,
-            "species": "SPECIES_ZUBAT",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_GEODUDE",
+			"weight": 20
         },
         {
-            "level_max": 6,
-			"level_min": 6,
-            "species": "SPECIES_ZUBAT",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 6,
-			"level_min": 6,
-            "species": "SPECIES_ZUBAT",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 6,
-			"level_min": 6,
-            "species": "SPECIES_ZUBAT",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 6,
-			"level_min": 6,
-            "species": "SPECIES_ZUBAT",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [

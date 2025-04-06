@@ -2,76 +2,76 @@
     "land_rate": 30,
     "land_encounters": [
         {
-            "level_max": 2,
+            "level_max": 3,
 			"level_min": 2,
-            "species": "SPECIES_PONYTA",
-            "weight": 10
+            "species": "SPECIES_STARLY",
+            "weight": 35
         },
         {
-            "level_max": 2,
+            "level_max": 3,
 			"level_min": 2,
-            "species": "SPECIES_PONYTA",
+            "species": "SPECIES_BIDOOF",
+            "weight": 35
+        },
+        {
+            "level_max": 3,
+			"level_min": 2,
+            "species": "SPECIES_NIDORAN_M",
             "weight": 10
         },
         {
             "level_max": 3,
-			"level_min": 3,
-            "species": "SPECIES_PONYTA",
-            "weight": 10
-        },
-        {
-            "level_max": 3,
-			"level_min": 3,
-            "species": "SPECIES_PONYTA",
-            "weight": 10
-        },
-        {
-            "level_max": 3,
-			"level_min": 3,
-            "species": "SPECIES_PONYTA",
-            "weight": 10
-        },
-        {
-            "level_max": 3,
-			"level_min": 3,
-            "species": "SPECIES_PONYTA",
-            "weight": 10
-        },
-        {
-            "level_max": 3,
-			"level_min": 3,
-            "species": "SPECIES_PONYTA",
-            "weight": 10
-        },
-        {
-            "level_max": 3,
-			"level_min": 3,
-            "species": "SPECIES_PONYTA",
-            "weight": 10
-        },
-        {
-            "level_max": 2,
 			"level_min": 2,
-            "species": "SPECIES_PONYTA",
+            "species": "SPECIES_NIDORAN_F",
             "weight": 10
         },
         {
-            "level_max": 2,
+            "level_max": 3,
 			"level_min": 2,
-            "species": "SPECIES_PONYTA",
+            "species": "SPECIES_KRICKETOT",
             "weight": 10
         },
         {
-            "level_max": 2,
-			"level_min": 2,
-            "species": "SPECIES_PONYTA",
-            "weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 2,
-			"level_min": 2,
-            "species": "SPECIES_PONYTA",
-            "weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [

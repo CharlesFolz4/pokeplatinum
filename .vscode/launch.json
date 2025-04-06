@@ -1,6 +1,7 @@
 {
     "version": "0.2.0",
     "configurations": [
+        
         {
             "name": "Debug in melonDS",
             "type": "cppdbg",
@@ -11,7 +12,7 @@
             "externalConsole": true,
             "miDebuggerServerAddress": "localhost:3333",
             // point this to your own gdb path...
-            "miDebuggerPath": "/path/to/binutils-gdb/gdb/gdb",
+            "miDebuggerPath": "/home/volch/Games/PlatinumDecomp/gdb-nds/gdb",
             //"miDebuggerPath": "gdb-multiarch",
             "setupCommands": [
                 {

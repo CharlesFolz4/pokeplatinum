@@ -2,76 +2,76 @@
     "land_rate": 30,
     "land_encounters": [
         {
-            "level_max": 19,
+            "level_max": 22,
 			"level_min": 19,
             "species": "SPECIES_STARAVIA",
-			"weight": 10
+			"weight": 20
         },
         {
-            "level_max": 18,
-			"level_min": 18,
-            "species": "SPECIES_GEODUDE",
+            "level_max": 21,
+			"level_min": 19,
+            "species": "SPECIES_SCYTHER",
+			"weight": 15
+        },
+        {
+            "level_max": 21,
+			"level_min": 19,
+            "species": "SPECIES_PONYTA",
 			"weight": 10
         },
         {
             "level_max": 21,
-			"level_min": 21,
-            "species": "SPECIES_SCYTHER",
-			"weight": 10
+			"level_min": 20,
+            "species": "SPECIES_ROSELIA",
+			"weight": 15
+        },
+        {
+            "level_max": 21,
+			"level_min": 19,
+            "species": "SPECIES_CHANSEY",
+			"weight": 5
+        },
+        {
+            "level_max": 21,
+			"level_min": 19,
+            "species": "SPECIES_MILTANK",
+			"weight": 5
+        },
+        {
+            "level_max": 23,
+			"level_min": 20,
+            "species": "SPECIES_STANTLER",
+			"weight": 20
         },
         {
             "level_max": 20,
-			"level_min": 20,
-            "species": "SPECIES_PONYTA",
-			"weight": 10
-        },
-        {
-            "level_max": 20,
-			"level_min": 20,
-            "species": "SPECIES_ROSELIA",
-			"weight": 10
-        },
-        {
-            "level_max": 19,
 			"level_min": 19,
-            "species": "SPECIES_PONYTA",
+            "species": "SPECIES_KRICKETUNE",
 			"weight": 10
         },
         {
-            "level_max": 19,
-			"level_min": 19,
-            "species": "SPECIES_SCYTHER",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 21,
-			"level_min": 21,
-            "species": "SPECIES_ROSELIA",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 21,
-			"level_min": 21,
-            "species": "SPECIES_PONYTA",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 19,
-			"level_min": 19,
-            "species": "SPECIES_CHANSEY",
-			"weight": 10
-        },
-        {
-            "level_max": 21,
-			"level_min": 21,
-            "species": "SPECIES_PONYTA",
-			"weight": 10
-        },
-        {
-            "level_max": 21,
-			"level_min": 21,
-            "species": "SPECIES_CHANSEY",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [
@@ -83,8 +83,8 @@
         "SPECIES_PONYTA"
     ],
     "night": [
-        "SPECIES_NOCTOWL",
-        "SPECIES_HOOTHOOT"
+        "SPECIES_ODDISH",
+        "SPECIES_GLOOM"
     ],
     "radar": [
         "SPECIES_MILTANK",

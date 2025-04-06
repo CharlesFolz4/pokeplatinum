@@ -5,73 +5,73 @@
             "level_max": 16,
 			"level_min": 16,
             "species": "SPECIES_PONYTA",
-			"weight": 10
+			"weight": 20
         },
         {
-            "level_max": 16,
+            "level_max": 18,
 			"level_min": 16,
             "species": "SPECIES_GEODUDE",
 			"weight": 10
         },
         {
             "level_max": 18,
-			"level_min": 18,
-            "species": "SPECIES_GLIGAR",
-			"weight": 10
-        },
-        {
-            "level_max": 17,
-			"level_min": 17,
-            "species": "SPECIES_KRICKETUNE",
-			"weight": 10
-        },
-        {
-            "level_max": 16,
 			"level_min": 16,
             "species": "SPECIES_GLIGAR",
-			"weight": 10
+			"weight": 20
         },
         {
             "level_max": 17,
+			"level_min": 17,
+            "species": "SPECIES_SPINARAK",
+			"weight": 10
+        },
+        {
+            "level_max": 19,
 			"level_min": 17,
             "species": "SPECIES_MACHOP",
 			"weight": 10
         },
         {
-            "level_max": 18,
-			"level_min": 18,
-            "species": "SPECIES_MACHOP",
+            "level_max": 17,
+			"level_min": 16,
+            "species": "SPECIES_STUNKY",
+			"weight": 15
+        },
+        {
+            "level_max": 17,
+			"level_min": 16,
+            "species": "SPECIES_BRONZOR",
 			"weight": 10
         },
         {
-            "level_max": 18,
-			"level_min": 18,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
+            "level_max": 17,
+			"level_min": 16,
+            "species": "SPECIES_LARVITAR",
+			"weight": 5
         },
         {
-            "level_max": 19,
-			"level_min": 19,
-            "species": "SPECIES_MACHOP",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 18,
-			"level_min": 18,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 19,
-			"level_min": 19,
-            "species": "SPECIES_MACHOP",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 18,
-			"level_min": 18,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [

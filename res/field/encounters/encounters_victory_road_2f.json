@@ -2,76 +2,76 @@
     "land_rate": 15,
     "land_encounters": [
         {
-            "level_max": 41,
-			"level_min": 41,
-            "species": "SPECIES_MAGNETON",
-			"weight": 10
-        },
-        {
-            "level_max": 42,
+            "level_max": 47,
 			"level_min": 42,
-            "species": "SPECIES_STEELIX",
+            "species": "SPECIES_GOLEM",
 			"weight": 10
         },
         {
-            "level_max": 41,
-			"level_min": 41,
-            "species": "SPECIES_GRAVELER",
-			"weight": 10
-        },
-        {
-            "level_max": 42,
+            "level_max": 47,
 			"level_min": 42,
-            "species": "SPECIES_STEELIX",
+            "species": "SPECIES_RHYDON",
 			"weight": 10
         },
         {
-            "level_max": 44,
-			"level_min": 44,
-            "species": "SPECIES_STEELIX",
-			"weight": 10
-        },
-        {
-            "level_max": 43,
-			"level_min": 43,
-            "species": "SPECIES_MAGNETON",
-			"weight": 10
-        },
-        {
-            "level_max": 44,
-			"level_min": 44,
-            "species": "SPECIES_GOLBAT",
-			"weight": 10
-        },
-        {
-            "level_max": 43,
-			"level_min": 43,
-            "species": "SPECIES_GRAVELER",
-			"weight": 10
-        },
-        {
-            "level_max": 42,
+            "level_max": 47,
 			"level_min": 42,
-            "species": "SPECIES_ONIX",
-			"weight": 10
-        },
-        {
-            "level_max": 43,
-			"level_min": 43,
             "species": "SPECIES_GABITE",
 			"weight": 10
         },
         {
-            "level_max": 42,
+            "level_max": 47,
 			"level_min": 42,
-            "species": "SPECIES_ONIX",
+            "species": "SPECIES_MACHAMP",
+			"weight": 0
+        },
+        {
+            "level_max": 47,
+			"level_min": 42,
+            "species": "SPECIES_STEELIX",
 			"weight": 10
         },
         {
-            "level_max": 43,
-			"level_min": 43,
-            "species": "SPECIES_GABITE",
+            "level_max": 47,
+			"level_min": 42,
+            "species": "SPECIES_PUPITAR",
 			"weight": 10
+        },
+        {
+            "level_max": 47,
+			"level_min": 42,
+            "species": "SPECIES_ARBOK",
+			"weight": 10
+        },
+        {
+            "level_max": 47,
+			"level_min": 42,
+            "species": "SPECIES_HOUNDOOM",
+			"weight": 10
+        },
+        {
+            "level_max": 47,
+			"level_min": 42,
+            "species": "SPECIES_BANETTE",
+			"weight": 10
+        },
+        {
+            "level_max": 47,
+			"level_min": 42,
+            "species": "SPECIES_ALAKAZAM", 
+			"weight": 10
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [
@@ -83,8 +83,8 @@
         "SPECIES_STEELIX"
     ],
     "night": [
-        "SPECIES_GOLBAT",
-        "SPECIES_STEELIX"
+        "SPECIES_BANETTE",
+        "SPECIES_HOUNDOOM"
     ],
     "radar": [
         "SPECIES_STEELIX",

@@ -2,76 +2,76 @@
     "land_rate": 30,
     "land_encounters": [
         {
-            "level_max": 10,
-			"level_min": 10,
+            "level_max": 12,
+			"level_min": 9,
             "species": "SPECIES_SHELLOS",
-            "weight": 10
+            "weight": 30
         },
         {
             "level_max": 11,
-			"level_min": 11,
-            "species": "SPECIES_SHELLOS",
-            "weight": 10
-        },
-        {
-            "level_max": 10,
 			"level_min": 10,
             "species": "SPECIES_BUIZEL",
-            "weight": 10
-        },
-        {
-            "level_max": 9,
-			"level_min": 9,
-            "species": "SPECIES_SHELLOS",
-            "weight": 10
+            "weight": 30
         },
         {
             "level_max": 10,
-			"level_min": 10,
+			"level_min": 8,
             "species": "SPECIES_BIDOOF",
             "weight": 10
         },
         {
-            "level_max": 11,
-			"level_min": 11,
-            "species": "SPECIES_SHELLOS",
-            "weight": 10
-        },
-        {
-            "level_max": 9,
+            "level_max": 10,
 			"level_min": 9,
             "species": "SPECIES_PACHIRISU",
             "weight": 10
         },
         {
             "level_max": 11,
-			"level_min": 11,
-            "species": "SPECIES_PACHIRISU",
-            "weight": 10
+			"level_min": 8,
+            "species": "SPECIES_BURMY",
+			"weight": 15
         },
         {
             "level_max": 11,
-			"level_min": 11,
-            "species": "SPECIES_BUIZEL",
-            "weight": 10
+			"level_min": 8,
+            "species": "SPECIES_TAILLOW",
+			"weight": 5
         },
         {
-            "level_max": 12,
-			"level_min": 12,
-            "species": "SPECIES_SHELLOS",
-            "weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 11,
-			"level_min": 11,
-            "species": "SPECIES_BUIZEL",
-            "weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 12,
-			"level_min": 12,
-            "species": "SPECIES_SHELLOS",
-            "weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [
@@ -83,8 +83,8 @@
         "SPECIES_SHELLOS"
     ],
     "night": [
-        "SPECIES_BUIZEL",
-        "SPECIES_SHELLOS"
+        "SPECIES_HOOTHOOT",
+        "SPECIES_HOOTHOOT"
     ],
     "radar": [
         "SPECIES_HOPPIP",

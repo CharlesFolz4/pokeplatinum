@@ -2,76 +2,76 @@
     "land_rate": 30,
     "land_encounters": [
         {
-            "level_max": 23,
+            "level_max": 26,
 			"level_min": 23,
             "species": "SPECIES_SHELLOS",
-			"weight": 10
+			"weight": 20
         },
         {
-            "level_max": 24,
+            "level_max": 26,
 			"level_min": 24,
             "species": "SPECIES_QUAGSIRE",
-			"weight": 10
+			"weight": 5
         },
         {
             "level_max": 25,
-			"level_min": 25,
-            "species": "SPECIES_BUIZEL",
-			"weight": 10
-        },
-        {
-            "level_max": 24,
-			"level_min": 24,
-            "species": "SPECIES_SHELLOS",
-			"weight": 10
-        },
-        {
-            "level_max": 26,
-			"level_min": 26,
-            "species": "SPECIES_QUAGSIRE",
-			"weight": 10
-        },
-        {
-            "level_max": 25,
-			"level_min": 25,
-            "species": "SPECIES_SHELLOS",
-			"weight": 10
-        },
-        {
-            "level_max": 24,
-			"level_min": 24,
-            "species": "SPECIES_CROAGUNK",
-			"weight": 10
-        },
-        {
-            "level_max": 25,
-			"level_min": 25,
-            "species": "SPECIES_CROAGUNK",
-			"weight": 10
-        },
-        {
-            "level_max": 23,
 			"level_min": 23,
             "species": "SPECIES_BUIZEL",
-			"weight": 10
+			"weight": 20
         },
+        {
+            "level_max": 25,
+			"level_min": 24,
+            "species": "SPECIES_CROAGUNK",
+			"weight": 20
+        }, 
         {
             "level_max": 26,
-			"level_min": 26,
-            "species": "SPECIES_SHELLOS",
-			"weight": 10
-        },
-        {
-            "level_max": 23,
 			"level_min": 23,
-            "species": "SPECIES_BUIZEL",
+            "species": "SPECIES_GULPIN",
 			"weight": 10
         },
         {
             "level_max": 26,
-			"level_min": 26,
-            "species": "SPECIES_SHELLOS",
-			"weight": 10
+			"level_min": 23,
+            "species": "SPECIES_KECLEON",
+			"weight": 15
+        },
+        {
+            "level_max": 26,
+			"level_min": 23,
+            "species": "SPECIES_KANGASKHAN",
+			"weight": 5
+        },
+        {
+            "level_max": 26,
+			"level_min": 23,
+            "species": "SPECIES_EXEGGCUTE",
+			"weight": 5
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [

@@ -2,76 +2,76 @@
     "land_rate": 10,
     "land_encounters": [
         {
-            "level_max": 14,
+            "level_max": 16,
+			"level_min": 13,
+            "species": "SPECIES_GASTLY",
+			"weight": 40
+        },
+        {
+            "level_max": 16,
+			"level_min": 13,
+            "species": "SPECIES_MISDREAVUS",
+			"weight": 20
+        },
+        {
+            "level_max": 16,
+			"level_min": 13,
+            "species": "SPECIES_SHUPPET",
+			"weight": 20
+        },
+        {
+            "level_max": 17,
 			"level_min": 14,
-            "species": "SPECIES_GASTLY",
-			"weight": 10
-        },
-        {
-            "level_max": 15,
-			"level_min": 15,
-            "species": "SPECIES_GASTLY",
-			"weight": 10
-        },
-        {
-            "level_max": 14,
-			"level_min": 14,
-            "species": "SPECIES_GASTLY",
-			"weight": 10
-        },
-        {
-            "level_max": 15,
-			"level_min": 15,
-            "species": "SPECIES_GASTLY",
+            "species": "SPECIES_POOCHYENA",
 			"weight": 10
         },
         {
             "level_max": 16,
-			"level_min": 16,
-            "species": "SPECIES_GASTLY",
+			"level_min": 13,
+            "species": "SPECIES_GLAMEOW",
 			"weight": 10
         },
         {
-            "level_max": 17,
-			"level_min": 17,
-            "species": "SPECIES_GASTLY",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 16,
-			"level_min": 16,
-            "species": "SPECIES_GASTLY",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 17,
-			"level_min": 17,
-            "species": "SPECIES_GASTLY",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 17,
-			"level_min": 17,
-            "species": "SPECIES_GASTLY",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 17,
-			"level_min": 17,
-            "species": "SPECIES_GASTLY",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 17,
-			"level_min": 17,
-            "species": "SPECIES_GASTLY",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 17,
-			"level_min": 17,
-            "species": "SPECIES_GASTLY",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [

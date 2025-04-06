@@ -124,31 +124,31 @@
             "level_max": 30,
             "level_min": 20,
             "species": "SPECIES_TENTACOOL",
-			"weight": 10
+			"weight": 30
         },
         {
             "level_max": 30,
             "level_min": 20,
             "species": "SPECIES_WINGULL",
-			"weight": 10
+			"weight": 30
         },
         {
             "level_max": 40,
             "level_min": 20,
             "species": "SPECIES_TENTACRUEL",
-			"weight": 10
+			"weight": 15
         },
         {
             "level_max": 40,
             "level_min": 20,
-            "species": "SPECIES_TENTACRUEL",
-			"weight": 10
+            "species": "SPECIES_LAPRAS",
+			"weight": 5
         },
         {
             "level_max": 40,
             "level_min": 20,
             "species": "SPECIES_PELIPPER",
-			"weight": 10
+			"weight": 20
         }
     ],
     "old_rod_rate": 25,
