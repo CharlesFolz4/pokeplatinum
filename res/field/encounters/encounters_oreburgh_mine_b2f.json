@@ -2,76 +2,76 @@
     "land_rate": 10,
     "land_encounters": [
         {
-            "level_max": 6,
-			"level_min": 6,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
-        },
-        {
-            "level_max": 7,
-			"level_min": 7,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
-        },
-        {
-            "level_max": 6,
-			"level_min": 6,
-            "species": "SPECIES_ZUBAT",
-			"weight": 10
-        },
-        {
-            "level_max": 7,
-			"level_min": 7,
-            "species": "SPECIES_ZUBAT",
-			"weight": 10
-        },
-        {
-            "level_max": 5,
+            "level_max": 9,
 			"level_min": 5,
             "species": "SPECIES_GEODUDE",
-			"weight": 10
+			"weight": 25
         },
         {
-            "level_max": 8,
-			"level_min": 8,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
+            "level_max": 10,
+			"level_min": 5,
+            "species": "SPECIES_ARON",
+			"weight": 25
         },
         {
-            "level_max": 7,
+            "level_max": 11,
 			"level_min": 7,
             "species": "SPECIES_ONIX",
-			"weight": 10
+			"weight": 25
         },
         {
             "level_max": 9,
-			"level_min": 9,
-            "species": "SPECIES_ONIX",
+			"level_min": 5,
+            "species": "SPECIES_MAGNEMITE",
+			"weight": 15
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_MAWILE",
 			"weight": 10
         },
         {
-            "level_max": 9,
-			"level_min": 9,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 8,
-			"level_min": 8,
-            "species": "SPECIES_ZUBAT",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 9,
-			"level_min": 9,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 8,
-			"level_min": 8,
-            "species": "SPECIES_ZUBAT",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [

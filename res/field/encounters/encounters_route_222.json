@@ -2,76 +2,76 @@
     "land_rate": 30,
     "land_encounters": [
         {
-            "level_max": 39,
+            "level_max": 41,
 			"level_min": 39,
             "species": "SPECIES_ELECTABUZZ",
-			"weight": 10
-        },
-        {
-            "level_max": 40,
-			"level_min": 40,
-            "species": "SPECIES_FLOATZEL",
-			"weight": 10
+			"weight": 20
         },
         {
             "level_max": 41,
-			"level_min": 41,
-            "species": "SPECIES_ELECTABUZZ",
-			"weight": 10
+			"level_min": 38,
+            "species": "SPECIES_LUXIO",
+			"weight": 5
         },
         {
-            "level_max": 38,
+            "level_max": 40,
 			"level_min": 38,
             "species": "SPECIES_CHATOT",
-			"weight": 10
-        },
-        {
-            "level_max": 38,
-			"level_min": 38,
-            "species": "SPECIES_WINGULL",
-			"weight": 10
-        },
-        {
-            "level_max": 39,
-			"level_min": 39,
-            "species": "SPECIES_MAGNEMITE",
-			"weight": 10
-        },
-        {
-            "level_max": 38,
-			"level_min": 38,
-            "species": "SPECIES_LUXIO",
-			"weight": 10
+			"weight": 20
         },
         {
             "level_max": 40,
-			"level_min": 40,
-            "species": "SPECIES_LUXIO",
-			"weight": 10
-        },
-        {
-            "level_max": 40,
-			"level_min": 40,
+			"level_min": 38,
             "species": "SPECIES_PELIPPER",
 			"weight": 10
         },
         {
-            "level_max": 41,
+            "level_max": 42,
 			"level_min": 41,
-            "species": "SPECIES_MAGNETON",
+            "species": "SPECIES_PURUGLY",
 			"weight": 10
         },
         {
             "level_max": 40,
-			"level_min": 40,
-            "species": "SPECIES_PELIPPER",
+			"level_min": 38,
+            "species": "SPECIES_KINGLER",
 			"weight": 10
         },
         {
-            "level_max": 41,
-			"level_min": 41,
-            "species": "SPECIES_MAGNETON",
+            "level_max": 40,
+			"level_min": 38,
+            "species": "SPECIES_SKITTY",
 			"weight": 10
+        },
+        {
+            "level_max": 40,
+			"level_min": 38,
+            "species": "SPECIES_FLAAFFY",
+			"weight": 15
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [

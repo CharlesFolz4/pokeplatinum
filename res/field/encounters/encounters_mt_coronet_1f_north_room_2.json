@@ -5,7 +5,7 @@
             "level_max": 33,
 			"level_min": 33,
             "species": "SPECIES_BRONZOR",
-			"weight": 10
+			"weight": 20
         },
         {
             "level_max": 34,
@@ -14,10 +14,10 @@
 			"weight": 10
         },
         {
-            "level_max": 33,
+            "level_max": 35,
 			"level_min": 33,
             "species": "SPECIES_MEDITITE",
-			"weight": 10
+			"weight": 20
         },
         {
             "level_max": 32,
@@ -32,46 +32,46 @@
 			"weight": 10
         },
         {
-            "level_max": 35,
-			"level_min": 35,
-            "species": "SPECIES_MEDITITE",
-			"weight": 10
-        },
-        {
-            "level_max": 32,
+            "level_max": 34,
 			"level_min": 32,
             "species": "SPECIES_CHINGLING",
-			"weight": 10
+			"weight": 15
         },
         {
             "level_max": 33,
 			"level_min": 33,
             "species": "SPECIES_NOSEPASS",
-			"weight": 10
+			"weight": 20
         },
         {
             "level_max": 34,
 			"level_min": 34,
             "species": "SPECIES_GOLBAT",
-			"weight": 10
+			"weight": 5
         },
         {
-            "level_max": 34,
-			"level_min": 34,
-            "species": "SPECIES_CHINGLING",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 34,
-			"level_min": 34,
-            "species": "SPECIES_GOLBAT",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 34,
-			"level_min": 34,
-            "species": "SPECIES_CHINGLING",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [

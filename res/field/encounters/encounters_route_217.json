@@ -2,76 +2,76 @@
     "land_rate": 30,
     "land_encounters": [
         {
-            "level_max": 32,
-			"level_min": 32,
-            "species": "SPECIES_SNOVER",
-			"weight": 10
-        },
-        {
-            "level_max": 33,
-			"level_min": 33,
-            "species": "SPECIES_SWINUB",
-			"weight": 10
-        },
-        {
-            "level_max": 33,
-			"level_min": 33,
-            "species": "SPECIES_SNEASEL",
-			"weight": 10
-        },
-        {
-            "level_max": 33,
+            "level_max": 36,
 			"level_min": 33,
             "species": "SPECIES_SNOVER",
-			"weight": 10
+			"weight": 30
         },
         {
-            "level_max": 34,
-			"level_min": 34,
+            "level_max": 36,
+			"level_min": 33,
+            "species": "SPECIES_SNORUNT",
+			"weight": 20
+        },
+        {
+            "level_max": 36,
+			"level_min": 33,
             "species": "SPECIES_SNEASEL",
 			"weight": 10
         },
         {
-            "level_max": 34,
-			"level_min": 34,
-            "species": "SPECIES_SWINUB",
+            "level_max": 36,
+			"level_min": 33,
+            "species": "SPECIES_PILOSWINE",
+			"weight": 15
+        },
+        {
+            "level_max": 36,
+			"level_min": 33,
+            "species": "SPECIES_URSARING",
 			"weight": 10
         },
         {
-            "level_max": 34,
-			"level_min": 34,
-            "species": "SPECIES_SNOVER",
-			"weight": 10
-        },
-        {
-            "level_max": 32,
-			"level_min": 32,
-            "species": "SPECIES_SWINUB",
-			"weight": 10
-        },
-        {
-            "level_max": 35,
+            "level_max": 37,
 			"level_min": 35,
-            "species": "SPECIES_SNEASEL",
-			"weight": 10
+            "species": "SPECIES_CASTFORM",
+			"weight": 15
         },
         {
-            "level_max": 35,
-			"level_min": 35,
-            "species": "SPECIES_SNOVER",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 35,
-			"level_min": 35,
-            "species": "SPECIES_SNEASEL",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 35,
-			"level_min": 35,
-            "species": "SPECIES_SNOVER",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [
@@ -83,8 +83,8 @@
         "SPECIES_SNOVER"
     ],
     "night": [
-        "SPECIES_SNORUNT",
-        "SPECIES_SNORUNT"
+        "SPECIES_MIGHTYENA",
+        "SPECIES_MIGHTYENA"
     ],
     "radar": [
         "SPECIES_PILOSWINE",

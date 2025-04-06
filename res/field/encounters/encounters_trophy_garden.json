@@ -2,19 +2,25 @@
     "land_rate": 10,
     "land_encounters": [
         {
-            "level_max": 21,
+            "level_max": 22,
 			"level_min": 21,
             "species": "SPECIES_PICHU",
-			"weight": 10
+			"weight": 15
         },
         {
-            "level_max": 22,
+            "level_max": 24,
+			"level_min": 22,
+            "species": "SPECIES_PIKACHU",
+			"weight": 5
+        },
+        {
+            "level_max": 23,
 			"level_min": 22,
             "species": "SPECIES_ROSELIA",
-			"weight": 10
+			"weight": 25
         },
         {
-            "level_max": 22,
+            "level_max": 24,
 			"level_min": 22,
             "species": "SPECIES_STARAVIA",
 			"weight": 10
@@ -26,52 +32,46 @@
 			"weight": 10
         },
         {
-            "level_max": 23,
-			"level_min": 23,
-            "species": "SPECIES_ROSELIA",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_EEVEE",
+			"weight": 5
         },
         {
-            "level_max": 24,
-			"level_min": 24,
-            "species": "SPECIES_STARAVIA",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_DITTO",
+			"weight": 5
         },
         {
-            "level_max": 22,
-			"level_min": 22,
-            "species": "SPECIES_PIKACHU",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_PORYGON",
+			"weight": 5
         },
         {
-            "level_max": 22,
-			"level_min": 22,
-            "species": "SPECIES_PICHU",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_CASTFORM",
+			"weight": 5
         },
         {
-            "level_max": 24,
-			"level_min": 24,
-            "species": "SPECIES_PIKACHU",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_MEOWTH",
+			"weight": 5
         },
         {
-            "level_max": 22,
-			"level_min": 22,
-            "species": "SPECIES_PICHU",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_TORCHIC",
+			"weight": 5
         },
         {
-            "level_max": 24,
-			"level_min": 24,
-            "species": "SPECIES_PIKACHU",
-			"weight": 10
-        },
-        {
-            "level_max": 22,
-			"level_min": 22,
-            "species": "SPECIES_PICHU",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_CHARMANDER",
+			"weight": 5
         }
     ],
     "swarms": [

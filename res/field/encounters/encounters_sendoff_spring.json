@@ -2,76 +2,76 @@
     "land_rate": 30,
     "land_encounters": [
         {
-            "level_max": 38,
-			"level_min": 38,
-            "species": "SPECIES_GRAVELER",
-			"weight": 10
-        },
-        {
             "level_max": 37,
 			"level_min": 37,
             "species": "SPECIES_BIBAREL",
+			"weight": 20
+        },
+        {
+            "level_max": 40,
+			"level_min": 37,
+            "species": "SPECIES_CHINGLING",
 			"weight": 10
         },
         {
-            "level_max": 39,
-			"level_min": 39,
-            "species": "SPECIES_GRAVELER",
+            "level_max": 40,
+			"level_min": 37,
+            "species": "SPECIES_DUSCLOPS",
 			"weight": 10
         },
         {
             "level_max": 38,
 			"level_min": 38,
             "species": "SPECIES_STARAVIA",
-			"weight": 10
+			"weight": 20
         },
         {
-            "level_max": 38,
-			"level_min": 38,
-            "species": "SPECIES_BIBAREL",
-			"weight": 10
+            "level_max": 42,
+			"level_min": 40,
+            "species": "SPECIES_LUNATONE",
+			"weight": 15
+        },
+        {
+            "level_max": 42,
+			"level_min": 40,
+            "species": "SPECIES_SOLROCK",
+			"weight": 15
         },
         {
             "level_max": 40,
-			"level_min": 40,
-            "species": "SPECIES_STARAVIA",
-			"weight": 10
-        },
-        {
-            "level_max": 37,
 			"level_min": 37,
-            "species": "SPECIES_GRAVELER",
+            "species": "SPECIES_TANGELA",
 			"weight": 10
         },
         {
-            "level_max": 37,
-			"level_min": 37,
-            "species": "SPECIES_CHINGLING",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 40,
-			"level_min": 40,
-            "species": "SPECIES_DUSCLOPS",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 39,
-			"level_min": 39,
-            "species": "SPECIES_CHINGLING",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 40,
-			"level_min": 40,
-            "species": "SPECIES_DUSCLOPS",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 39,
-			"level_min": 39,
-            "species": "SPECIES_CHINGLING",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [

@@ -2,76 +2,76 @@
     "land_rate": 30,
     "land_encounters": [
         {
-            "level_max": 19,
-			"level_min": 19,
+            "level_max": 20,
+			"level_min": 18,
             "species": "SPECIES_ROSELIA",
-			"weight": 10
+			"weight": 20
         },
         {
-            "level_max": 18,
+            "level_max": 19,
 			"level_min": 18,
             "species": "SPECIES_BIBAREL",
+			"weight": 20
+        },
+        {
+            "level_max": 120,
+			"level_min": 18,
+            "species": "SPECIES_STARAVIA",
+			"weight": 15
+        },
+        {
+            "level_max": 19,
+			"level_min": 16,
+            "species": "SPECIES_RALTS",
 			"weight": 10
         },
         {
             "level_max": 19,
-			"level_min": 19,
-            "species": "SPECIES_STARAVIA",
-			"weight": 10
-        },
-        {
-            "level_max": 17,
 			"level_min": 17,
-            "species": "SPECIES_RALTS",
-			"weight": 10
+            "species": "SPECIES_CHANSEY",
+			"weight": 5
         },
         {
-            "level_max": 18,
-			"level_min": 18,
-            "species": "SPECIES_STARAVIA",
-			"weight": 10
-        },
-        {
-            "level_max": 19,
-			"level_min": 19,
-            "species": "SPECIES_BIBAREL",
-			"weight": 10
-        },
-        {
-            "level_max": 18,
-			"level_min": 18,
-            "species": "SPECIES_RALTS",
+            "level_max": 20,
+			"level_min": 17,
+            "species": "SPECIES_VULPIX",
 			"weight": 10
         },
         {
             "level_max": 20,
-			"level_min": 20,
-            "species": "SPECIES_ROSELIA",
-			"weight": 10
-        },
-        {
-            "level_max": 19,
-			"level_min": 19,
-            "species": "SPECIES_RALTS",
-			"weight": 10
-        },
-        {
-            "level_max": 17,
 			"level_min": 17,
-            "species": "SPECIES_CHANSEY",
+            "species": "SPECIES_GROWLITHE",
 			"weight": 10
         },
         {
-            "level_max": 19,
-			"level_min": 19,
-            "species": "SPECIES_RALTS",
-			"weight": 10
+            "level_max": 15,
+			"level_min": 12,
+            "species": "SPECIES_MIME_JR",
+			"weight": 5
         },
         {
-            "level_max": 19,
-			"level_min": 19,
-            "species": "SPECIES_CHANSEY",
-			"weight": 10
+            "level_max": 15,
+			"level_min": 12,
+            "species": "SPECIES_BONSLY",
+			"weight": 5
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [
@@ -79,11 +79,11 @@
         "SPECIES_SNUBBULL"
     ],
     "day": [
-        "SPECIES_STARAVIA",
+        "SPECIES_SHUPPET",
         "SPECIES_RALTS"
     ],
     "night": [
-        "SPECIES_ZUBAT",
+        "SPECIES_NOCTOWL",
         "SPECIES_DUSKULL"
     ],
     "radar": [

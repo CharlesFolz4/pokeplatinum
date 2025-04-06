@@ -2,76 +2,76 @@
     "land_rate": 10,
     "land_encounters": [
         {
-            "level_max": 18,
+            "level_max": 20,
 			"level_min": 18,
             "species": "SPECIES_BRONZOR",
-			"weight": 10
+			"weight": 20
         },
         {
-            "level_max": 18,
-			"level_min": 18,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
-        },
-        {
-            "level_max": 17,
+            "level_max": 20,
 			"level_min": 17,
             "species": "SPECIES_GEODUDE",
-			"weight": 10
+			"weight": 30
         },
         {
             "level_max": 19,
-			"level_min": 19,
-            "species": "SPECIES_ZUBAT",
-			"weight": 10
-        },
-        {
-            "level_max": 20,
-			"level_min": 20,
-            "species": "SPECIES_BRONZOR",
-			"weight": 10
-        },
-        {
-            "level_max": 20,
-			"level_min": 20,
-            "species": "SPECIES_ONIX",
-			"weight": 10
-        },
-        {
-            "level_max": 19,
-			"level_min": 19,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
-        },
-        {
-            "level_max": 20,
-			"level_min": 20,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
-        },
-        {
-            "level_max": 17,
 			"level_min": 17,
             "species": "SPECIES_ZUBAT",
-			"weight": 10
+			"weight": 15
         },
         {
-            "level_max": 18,
+            "level_max": 20,
 			"level_min": 18,
             "species": "SPECIES_ONIX",
-			"weight": 10
+			"weight": 15
         },
         {
-            "level_max": 17,
-			"level_min": 17,
-            "species": "SPECIES_ZUBAT",
-			"weight": 10
-        },
-        {
-            "level_max": 18,
+            "level_max": 20,
 			"level_min": 18,
-            "species": "SPECIES_ONIX",
+            "species": "SPECIES_SANDSHREW",
 			"weight": 10
+        },
+        {
+            "level_max": 20,
+			"level_min": 18,
+            "species": "SPECIES_SABLEYE",
+			"weight": 10
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [

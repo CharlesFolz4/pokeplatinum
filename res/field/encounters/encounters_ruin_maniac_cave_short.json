@@ -2,76 +2,88 @@
     "land_rate": 10,
     "land_encounters": [
         {
-            "level_max": 23,
-			"level_min": 23,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
-        },
-        {
-            "level_max": 22,
+            "level_max": 25,
 			"level_min": 22,
             "species": "SPECIES_GEODUDE",
-			"weight": 10
+			"weight": 85
         },
         {
-            "level_max": 21,
-			"level_min": 21,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
-        },
-        {
-            "level_max": 23,
-			"level_min": 23,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
-        },
-        {
-            "level_max": 23,
-			"level_min": 23,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
-        },
-        {
-            "level_max": 23,
-			"level_min": 23,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
-        },
-        {
-            "level_max": 23,
-			"level_min": 23,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
-        },
-        {
-            "level_max": 23,
-			"level_min": 23,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
-        },
-        {
-            "level_max": 23,
-			"level_min": 23,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
-        },
-        {
-            "level_max": 22,
+            "level_max": 25,
 			"level_min": 22,
             "species": "SPECIES_HIPPOPOTAS",
 			"weight": 10
         },
         {
-            "level_max": 23,
-			"level_min": 23,
-            "species": "SPECIES_GEODUDE",
-			"weight": 10
+            "level_max": 25,
+			"level_min": 22,
+            "species": "SPECIES_TRAPINCH",
+			"weight": 5
         },
         {
-            "level_max": 24,
-			"level_min": 24,
-            "species": "SPECIES_HIPPOPOTAS",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [

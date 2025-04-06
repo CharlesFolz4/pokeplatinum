@@ -2,76 +2,76 @@
     "land_rate": 30,
     "land_encounters": [
         {
-            "level_max": 29,
-			"level_min": 29,
+            "level_max": 31,
+			"level_min": 28,
             "species": "SPECIES_FLOATZEL",
-			"weight": 10
+			"weight": 20
         },
         {
-            "level_max": 28,
+            "level_max": 31,
 			"level_min": 28,
             "species": "SPECIES_GIRAFARIG",
 			"weight": 10
         },
         {
-            "level_max": 28,
+            "level_max": 31,
 			"level_min": 28,
             "species": "SPECIES_ROSELIA",
-			"weight": 10
-        },
-        {
-            "level_max": 29,
-			"level_min": 29,
-            "species": "SPECIES_ROSELIA",
-			"weight": 10
+			"weight": 20
         },
         {
             "level_max": 31,
-			"level_min": 31,
-            "species": "SPECIES_SUDOWOODO",
-			"weight": 10
-        },
-        {
-            "level_max": 30,
-			"level_min": 30,
-            "species": "SPECIES_SUDOWOODO",
-			"weight": 10
-        },
-        {
-            "level_max": 30,
-			"level_min": 30,
-            "species": "SPECIES_GIRAFARIG",
-			"weight": 10
-        },
-        {
-            "level_max": 29,
-			"level_min": 29,
+			"level_min": 28,
             "species": "SPECIES_SUDOWOODO",
 			"weight": 10
         },
         {
             "level_max": 31,
-			"level_min": 31,
-            "species": "SPECIES_FLOATZEL",
-			"weight": 10
-        },
-        {
-            "level_max": 30,
-			"level_min": 30,
-            "species": "SPECIES_ROSELIA",
+			"level_min": 28,
+            "species": "SPECIES_NIDORINO",
 			"weight": 10
         },
         {
             "level_max": 31,
-			"level_min": 31,
-            "species": "SPECIES_FLOATZEL",
+			"level_min": 28,
+            "species": "SPECIES_NIDORINA",
 			"weight": 10
         },
         {
+            "level_max": 31,
+			"level_min": 28,
+            "species": "SPECIES_RHYHORN",
+			"weight": 15
+        },
+        {
             "level_max": 30,
-			"level_min": 30,
-            "species": "SPECIES_ROSELIA",
-			"weight": 10
+			"level_min": 28,
+            "species": "SPECIES_QUILAVA",
+			"weight": 5
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [

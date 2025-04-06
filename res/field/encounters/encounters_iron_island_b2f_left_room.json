@@ -2,76 +2,76 @@
     "land_rate": 10,
     "land_encounters": [
         {
-            "level_max": 32,
+            "level_max": 33,
 			"level_min": 32,
             "species": "SPECIES_ONIX",
 			"weight": 10
         },
         {
-            "level_max": 33,
-			"level_min": 33,
+            "level_max": 34,
+			"level_min": 31,
             "species": "SPECIES_GRAVELER",
 			"weight": 10
         },
         {
-            "level_max": 31,
+            "level_max": 33,
 			"level_min": 31,
             "species": "SPECIES_GOLBAT",
 			"weight": 10
         },
         {
-            "level_max": 33,
-			"level_min": 33,
-            "species": "SPECIES_GOLBAT",
-			"weight": 10
-        },
-        {
-            "level_max": 33,
-			"level_min": 33,
-            "species": "SPECIES_GRAVELER",
-			"weight": 10
-        },
-        {
-            "level_max": 34,
-			"level_min": 34,
-            "species": "SPECIES_GRAVELER",
-			"weight": 10
-        },
-        {
-            "level_max": 33,
+            "level_max": 35,
 			"level_min": 33,
             "species": "SPECIES_STEELIX",
 			"weight": 10
         },
         {
             "level_max": 35,
-			"level_min": 35,
-            "species": "SPECIES_STEELIX",
+			"level_min": 32,
+            "species": "SPECIES_SABLEYE",
 			"weight": 10
         },
         {
-            "level_max": 31,
-			"level_min": 31,
-            "species": "SPECIES_GRAVELER",
+            "level_max": 35,
+			"level_min": 32,
+            "species": "SPECIES_MAWILE",
+			"weight": 10
+        },
+        {
+            "level_max": 33,
+			"level_min": 32,
+            "species": "SPECIES_NUMEL",
+			"weight": 10
+        },
+        {
+            "level_max": 35,
+			"level_min": 33,
+            "species": "SPECIES_CAMERUPT",
 			"weight": 10
         },
         {
             "level_max": 32,
-			"level_min": 32,
-            "species": "SPECIES_GRAVELER",
-			"weight": 10
-        },
-        {
-            "level_max": 31,
 			"level_min": 31,
-            "species": "SPECIES_GRAVELER",
+            "species": "SPECIES_ARON",
 			"weight": 10
         },
         {
-            "level_max": 32,
+            "level_max": 35,
 			"level_min": 32,
-            "species": "SPECIES_GRAVELER",
+            "species": "SPECIES_LAIRON",
 			"weight": 10
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [

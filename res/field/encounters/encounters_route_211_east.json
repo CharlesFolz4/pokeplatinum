@@ -2,76 +2,76 @@
     "land_rate": 30,
     "land_encounters": [
         {
-            "level_max": 27,
+            "level_max": 29,
 			"level_min": 27,
             "species": "SPECIES_MEDITITE",
-			"weight": 10
-        },
-        {
-            "level_max": 28,
-			"level_min": 28,
-            "species": "SPECIES_GRAVELER",
-			"weight": 10
-        },
-        {
-            "level_max": 28,
-			"level_min": 28,
-            "species": "SPECIES_MEDITITE",
-			"weight": 10
+			"weight": 20
         },
         {
             "level_max": 29,
 			"level_min": 29,
-            "species": "SPECIES_MEDITITE",
-			"weight": 10
+            "species": "SPECIES_BRONZOR",
+			"weight": 20
         },
         {
-            "level_max": 28,
+            "level_max": 30,
 			"level_min": 28,
             "species": "SPECIES_CHINGLING",
-			"weight": 10
+			"weight": 15
         },
         {
-            "level_max": 29,
-			"level_min": 29,
+            "level_max": 30,
+			"level_min": 28,
             "species": "SPECIES_MACHOKE",
 			"weight": 10
         },
         {
             "level_max": 30,
-			"level_min": 30,
-            "species": "SPECIES_CHINGLING",
-			"weight": 10
+			"level_min": 28,
+            "species": "SPECIES_GLIGAR",
+			"weight": 30
         },
         {
-            "level_max": 29,
-			"level_min": 29,
-            "species": "SPECIES_BRONZOR",
-			"weight": 10
+            "level_max": 31,
+			"level_min": 38,
+            "species": "SPECIES_URSARING",
+			"weight": 5
         },
         {
-            "level_max": 30,
-			"level_min": 30,
-            "species": "SPECIES_MACHOKE",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 29,
-			"level_min": 29,
-            "species": "SPECIES_BRONZOR",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 30,
-			"level_min": 30,
-            "species": "SPECIES_MACHOKE",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 29,
-			"level_min": 29,
-            "species": "SPECIES_BRONZOR",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [
@@ -83,7 +83,7 @@
         "SPECIES_MEDITITE"
     ],
     "night": [
-        "SPECIES_ZUBAT",
+        "SPECIES_NOCTOWL",
         "SPECIES_NOCTOWL"
     ],
     "radar": [

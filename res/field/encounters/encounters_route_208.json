@@ -2,10 +2,10 @@
     "land_rate": 30,
     "land_encounters": [
         {
-            "level_max": 18,
+            "level_max": 19,
 			"level_min": 18,
             "species": "SPECIES_BUDEW",
-			"weight": 10
+			"weight": 20
         },
         {
             "level_max": 18,
@@ -14,64 +14,64 @@
 			"weight": 10
         },
         {
-            "level_max": 19,
-			"level_min": 19,
-            "species": "SPECIES_BUDEW",
-			"weight": 10
-        },
-        {
-            "level_max": 17,
+            "level_max": 18,
 			"level_min": 17,
             "species": "SPECIES_RALTS",
-			"weight": 10
+			"weight": 15
         },
         {
-            "level_max": 19,
+            "level_max": 20,
 			"level_min": 19,
             "species": "SPECIES_ROSELIA",
-			"weight": 10
+			"weight": 15
         },
         {
-            "level_max": 18,
+            "level_max": 20,
 			"level_min": 18,
             "species": "SPECIES_BIBAREL",
-			"weight": 10
+			"weight": 20
         },
         {
-            "level_max": 18,
+            "level_max": 20,
 			"level_min": 18,
-            "species": "SPECIES_RALTS",
-			"weight": 10
-        },
-        {
-            "level_max": 19,
-			"level_min": 19,
-            "species": "SPECIES_BIBAREL",
+            "species": "SPECIES_ZANGOOSE",
 			"weight": 10
         },
         {
             "level_max": 20,
-			"level_min": 20,
-            "species": "SPECIES_ROSELIA",
+			"level_min": 18,
+            "species": "SPECIES_SEVIPER",
 			"weight": 10
         },
         {
-            "level_max": 20,
-			"level_min": 20,
-            "species": "SPECIES_BIBAREL",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 20,
-			"level_min": 20,
-            "species": "SPECIES_ROSELIA",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 20,
-			"level_min": 20,
-            "species": "SPECIES_BIBAREL",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [
@@ -84,7 +84,7 @@
     ],
     "night": [
         "SPECIES_ZUBAT",
-        "SPECIES_RALTS"
+        "SPECIES_HOUNDOUR"
     ],
     "radar": [
         "SPECIES_SMEARGLE",

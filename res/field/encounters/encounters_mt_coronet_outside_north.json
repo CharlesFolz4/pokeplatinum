@@ -5,73 +5,73 @@
             "level_max": 36,
 			"level_min": 36,
             "species": "SPECIES_SNOVER",
-			"weight": 10
-        },
-        {
-            "level_max": 38,
-			"level_min": 38,
-            "species": "SPECIES_ABOMASNOW",
-			"weight": 10
-        },
-        {
-            "level_max": 38,
-			"level_min": 38,
-            "species": "SPECIES_MEDICHAM",
-			"weight": 10
-        },
-        {
-            "level_max": 39,
-			"level_min": 39,
-            "species": "SPECIES_ABOMASNOW",
-			"weight": 10
+			"weight": 20
         },
         {
             "level_max": 40,
-			"level_min": 40,
-            "species": "SPECIES_MACHOKE",
-			"weight": 10
+			"level_min": 38,
+            "species": "SPECIES_ABOMASNOW",
+			"weight": 30
         },
         {
             "level_max": 40,
-			"level_min": 40,
-            "species": "SPECIES_MEDICHAM",
-			"weight": 10
+			"level_min": 38,
+            "species": "SPECIES_ABSOL",
+			"weight": 20
         },
         {
-            "level_max": 37,
+            "level_max": 41,
 			"level_min": 37,
-            "species": "SPECIES_CHINGLING",
-			"weight": 10
+            "species": "SPECIES_ALTARIA",
+			"weight": 15
         },
         {
-            "level_max": 38,
-			"level_min": 38,
-            "species": "SPECIES_NOSEPASS",
-			"weight": 10
+            "level_max": 35,
+			"level_min": 35,
+            "species": "SPECIES_BAGON",
+			"weight": 5
         },
         {
-            "level_max": 38,
-			"level_min": 38,
-            "species": "SPECIES_ABSOL",
-			"weight": 10
-        },
-        {
-            "level_max": 39,
-			"level_min": 39,
-            "species": "SPECIES_CHINGLING",
+            "level_max": 40,
+			"level_min": 35,
+            "species": "SPECIES_SHELGON",
 			"weight": 10
         },
         {
             "level_max": 40,
-			"level_min": 40,
-            "species": "SPECIES_ABSOL",
-			"weight": 10
+			"level_min": 38,
+            "species": "SPECIES_SKARMORY",
+			"weight": 5
         },
         {
-            "level_max": 39,
-			"level_min": 39,
-            "species": "SPECIES_CHINGLING",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [
@@ -79,11 +79,11 @@
         "SPECIES_ABOMASNOW"
     ],
     "day": [
-        "SPECIES_MEDICHAM",
-        "SPECIES_ABOMASNOW"
+        "SPECIES_LOUDRED",
+        "SPECIES_LOUDRED"
     ],
     "night": [
-        "SPECIES_GOLBAT",
+        "SPECIES_NOCTOWL",
         "SPECIES_NOCTOWL"
     ],
     "radar": [

@@ -32,11 +32,11 @@ int GreatMarshBinoculars_GetMonSpecies(FieldSystem *fieldSystem)
         encounterTable[i] = encounterData->grassEncounters.encounters[i].species;
     }
 
-    BOOL natDexObtained = Pokedex_IsNationalDexObtained(SaveData_GetPokedex(FieldSystem_GetSaveData(fieldSystem)));
+    //BOOL natDexObtained = Pokedex_IsNationalDexObtained(SaveData_GetPokedex(FieldSystem_GetSaveData(fieldSystem)));
 
-    ReplaceGreatMarshDailyEncounters(SpecialEncounter_GetDailyMon(SaveData_GetSpecialEncounters(fieldSystem->saveData), DAILY_MARSH), natDexObtained, fieldSystem->location->mapId, &encounterTable[6], &encounterTable[7]);
+    //ReplaceGreatMarshDailyEncounters(SpecialEncounter_GetDailyMon(SaveData_GetSpecialEncounters(fieldSystem->saveData), DAILY_MARSH), natDexObtained, fieldSystem->location->mapId, &encounterTable[6], &encounterTable[7]);
     //WildEncounters_UpdateTimedEncounters(encounterData, encounterTable);
-    WildEncounters_ReplaceDualSlotEncounters(encounterData, natDexObtained, &encounterTable[8], &encounterTable[9]);
+    //WildEncounters_ReplaceDualSlotEncounters(encounterData, natDexObtained, &encounterTable[8], &encounterTable[9]);
 
     return encounterTable[LCRNG_RandMod(MAX_GRASS_ENCOUNTERS)];
 }

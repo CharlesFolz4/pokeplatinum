@@ -2,76 +2,76 @@
     "land_rate": 30,
     "land_encounters": [
         {
-            "level_max": 19,
+            "level_max": 21,
 			"level_min": 19,
             "species": "SPECIES_STARAVIA",
-			"weight": 10
-        },
-        {
-            "level_max": 20,
-			"level_min": 20,
-            "species": "SPECIES_MARILL",
-			"weight": 10
+			"weight": 20
         },
         {
             "level_max": 22,
-			"level_min": 22,
-            "species": "SPECIES_SCYTHER",
+			"level_min": 20,
+            "species": "SPECIES_MARILL",
+			"weight": 25
+        },
+        {
+            "level_max": 22,
+			"level_min": 20,
+            "species": "SPECIES_PINSIR",
 			"weight": 10
         },
         {
             "level_max": 21,
-			"level_min": 21,
-            "species": "SPECIES_STARAVIA",
-			"weight": 10
-        },
-        {
-            "level_max": 20,
-			"level_min": 20,
+			"level_min": 19,
             "species": "SPECIES_LICKITUNG",
 			"weight": 10
         },
         {
             "level_max": 19,
-			"level_min": 19,
+			"level_min": 18,
             "species": "SPECIES_ABRA",
-			"weight": 10
+			"weight": 5
         },
         {
-            "level_max": 20,
-			"level_min": 20,
-            "species": "SPECIES_SCYTHER",
-			"weight": 10
-        },
-        {
-            "level_max": 21,
+            "level_max": 22,
 			"level_min": 21,
             "species": "SPECIES_KADABRA",
 			"weight": 10
         },
         {
-            "level_max": 22,
-			"level_min": 22,
-            "species": "SPECIES_MARILL",
-			"weight": 10
+            "level_max": 23,
+			"level_min": 20,
+            "species": "SPECIES_STANTLER",
+			"weight": 20
         },
         {
-            "level_max": 22,
-			"level_min": 22,
-            "species": "SPECIES_KADABRA",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 22,
-			"level_min": 22,
-            "species": "SPECIES_MARILL",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         },
         {
-            "level_max": 22,
-			"level_min": 22,
-            "species": "SPECIES_KADABRA",
-			"weight": 10
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
+        },
+        {
+            "level_max": 0,
+			"level_min": 0,
+            "species": "SPECIES_NONE",
+			"weight": 0
         }
     ],
     "swarms": [
@@ -83,8 +83,8 @@
         "SPECIES_STARAVIA"
     ],
     "night": [
-        "SPECIES_MARILL",
-        "SPECIES_MARILL"
+        "SPECIES_ODDISH",
+        "SPECIES_GLOOM"
     ],
     "radar": [
         "SPECIES_LICKITUNG",
