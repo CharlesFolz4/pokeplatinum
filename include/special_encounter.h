@@ -31,7 +31,7 @@ RadarChainRecords *SpecialEncounter_GetRadarChainRecords(SpecialEncounter *speEn
 SpecialEncounter *SaveData_GetSpecialEncounters(SaveData *saveData);
 const int SpecialEncounter_GetLastSlatheredTreeId(PlayerHoneyTreeStates *treeDat);
 void SpecialEncounter_SetLastSlatheredTreeId(const u8 treeId, PlayerHoneyTreeStates *treeDat);
-HoneyTree *SpecialEncounter_GetHoneyTree(const u8 treeID, PlayerHoneyTreeStates *treeDat);
+HoneyTree *SpecialEncounter_GetHoneyTree(const u8 treeID, SpecialEncounter *treeDat);
 void SpecialEncounter_EnableSwarms(SaveData *saveData);
 u8 SpecialEncounter_IsSwarmEnabled(SpecialEncounter *speEnc);
 void SpecialEncounter_UpdateRecentRoutes(SpecialEncounter *speEnc, const int newMap);
