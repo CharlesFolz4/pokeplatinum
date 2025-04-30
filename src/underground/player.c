@@ -234,7 +234,6 @@ void UndergroundPlayer_ProcessTalkEvent(int unused0, int unused1, void *data, vo
 
         if (commPlayerMan->talkCount[event->talkTargetNetID] == 0) {
             UndergroundRecord_IncrementPeopleMet(SaveData_GetUndergroundRecord(FieldSystem_GetSaveData(commPlayerMan->fieldSystem)), event->talkTargetNetID);
-            SystemVars_SetSpiritombCounter(varsFlags, SystemVars_GetSpiritombCounter(varsFlags) + 1);
             SystemVars_SetUndergroundTalkCounter(varsFlags, SystemVars_GetUndergroundTalkCounter(varsFlags) + 1);
 
             commPlayerMan->talkCount[event->talkTargetNetID]++;

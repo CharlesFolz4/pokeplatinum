@@ -40,7 +40,7 @@ Route209_PokefanM:
 Route209_HallowedTower:
     PlaySE SEQ_SE_CONFIRM
     LockAll
-    GoToIfEq VAR_HALLOWED_TOWER_STATE, 1, Route209_CheckSpiritombCounter
+    GoToIfEq VAR_HALLOWED_TOWER_HAS_KEYSTONE, 1, CheckSpiritombEncounter
     CheckItem ITEM_ODD_KEYSTONE, 1, VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, Route209_ThereIsABrokenTower
     Message Route209_Text_WouldYouLikeToUseTheOddKeystone
@@ -55,22 +55,22 @@ Route209_UseOddKeystone:
     Message Route209_Text_PlayerUsedTheOddKeystone
     WaitButton
     RemoveItem ITEM_ODD_KEYSTONE, 1, VAR_RESULT
-    SetVar VAR_HALLOWED_TOWER_STATE, 1
+    SetVar VAR_HALLOWED_TOWER_HAS_KEYSTONE, 1
     CloseMessage
     ReleaseAll
     End
 
-Route209_CheckSpiritombCounter:
-    GetSpiritombCounter VAR_RESULT
-    GoToIfGe VAR_RESULT, 32, Route209_EncounterSpiritomb
-    GoToIfGe VAR_RESULT, 29, Route209_ThereIsSomeSortOfPresence
-    GoToIfGe VAR_RESULT, 22, Route209_IsThatTowerShaking
-    GoToIfGe VAR_RESULT, 15, Route209_IsThatCryingComingFromInside
-    GoToIfGe VAR_RESULT, 8, Route209_ItsStonesAppearToHaveShifted
-    GoTo Route209_ItWasBuiltManyYearsAgo
+CheckSpiritombEncounter:
+    Message 4
+    WaitABXPadPress
+    Message 5
+    WaitABXPadPress
+    Message 6
+    WaitABXPadPress
+    GoTo TriggerSpiritombEncounter
 
-Route209_EncounterSpiritomb:
-    WaitSE SEQ_SE_CONFIRM
+TriggerSpiritombEncounter:
+    WaitFanfare SEQ_SE_CONFIRM
     PlayCry SPECIES_SPIRITOMB
     Message Route209_Text_SpiritombCry
     WaitCry
@@ -78,47 +78,12 @@ Route209_EncounterSpiritomb:
     StartWildBattle SPECIES_SPIRITOMB, 25
     CheckWonBattle VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, Route209_BlackOut
-    SetVar VAR_HALLOWED_TOWER_STATE, 0
+    SetVar VAR_HALLOWED_TOWER_HAS_KEYSTONE, 0
     ClearSpiritombCounter
     End
 
 Route209_BlackOut:
     BlackOutFromBattle
-    ReleaseAll
-    End
-
-Route209_ItWasBuiltManyYearsAgo:
-    Message Route209_Text_ItWasBuiltManyYearsAgo
-    WaitButton
-    CloseMessage
-    ReleaseAll
-    End
-
-Route209_ItsStonesAppearToHaveShifted:
-    Message Route209_Text_ItsStonesAppearToHaveShifted
-    WaitButton
-    CloseMessage
-    ReleaseAll
-    End
-
-Route209_IsThatCryingComingFromInside:
-    Message Route209_Text_IsThatCryingComingFromInside
-    WaitButton
-    CloseMessage
-    ReleaseAll
-    End
-
-Route209_IsThatTowerShaking:
-    Message Route209_Text_IsTheTowerShaking
-    WaitButton
-    CloseMessage
-    ReleaseAll
-    End
-
-Route209_ThereIsSomeSortOfPresence:
-    Message Route209_Text_ThereIsSomeSortOfPresence
-    WaitButton
-    CloseMessage
     ReleaseAll
     End
 
