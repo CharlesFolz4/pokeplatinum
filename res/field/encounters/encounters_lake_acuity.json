@@ -29,13 +29,13 @@
             "level_max": 41,
 			"level_min": 38,
             "species": "SPECIES_SEALEO",
-			"weight": 15
+			"weight": 10
         },
         {
-            "level_max": 0,
-			"level_min": 0,
-            "species": "SPECIES_NONE",
-			"weight": 0
+            "level_max": 40,
+			"level_min": 36,
+            "species": "SPECIES_PRINPLUP",
+			"weight": 5
         },
         {
             "level_max": 0,
@@ -124,31 +124,31 @@
             "level_max": 30,
             "level_min": 20,
             "species": "SPECIES_PSYDUCK",
-			"weight": 10
+			"weight": 15
         },
         {
             "level_max": 30,
             "level_min": 20,
             "species": "SPECIES_SEALEO",
-			"weight": 10
+			"weight": 30
         },
         {
             "level_max": 50,
             "level_min": 40,
             "species": "SPECIES_WALREIN",
-			"weight": 10
+			"weight": 30
         },
         {
             "level_max": 40,
             "level_min": 20,
             "species": "SPECIES_GOLDUCK",
-			"weight": 10
+			"weight": 15
         },
         {
             "level_max": 0,
 			"level_min": 0,
-            "species": "SPECIES_NONE",
-			"weight": 0
+            "species": "SPECIES_PIPLUP",
+			"weight": 5
         }
     ],
     "old_rod_rate": 100,
