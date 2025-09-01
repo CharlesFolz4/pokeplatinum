@@ -102,7 +102,6 @@ static BOOL IsDoneFishing(SysTask *task);
 static int HasCaughtFish(SysTask *task);
 
 BOOL (*const sFishingActions[])(FishingTask *, PlayerAvatar *, MapObject *);
-const int sRodTypeHookTimingWindow[];
 
 void *FishingContext_Init(FieldSystem *fieldSystem, enum HeapID heapID, enum EncounterFishingRodType rodType)
 {
@@ -252,7 +251,6 @@ static BOOL FishingTask_CastRod(FishingTask *fishingTask, PlayerAvatar *playerAv
 static BOOL FishingTask_SetFishWait(FishingTask *fishingTask, PlayerAvatar *playerAvatar, MapObject *playerMapObject)
 {
     fishingTask->fishDelayCounter = ((LCRNG_Next() % 4) + 1) * 30;
-    fishingTask->fishHookedCounter = sRodTypeHookTimingWindow[fishingTask->rodType];
     fishingTask->fishingTask = FUNC_FishingTask_WaitForFish;
 
     return TRUE;
@@ -281,18 +279,10 @@ static BOOL FishingTask_WaitForFish(FishingTask *fishingTask, PlayerAvatar *play
 
 static BOOL FishingTask_CheckForReelInFish(FishingTask *fishingTask, PlayerAvatar *playerAvatar, MapObject *playerMapObject)
 {
-    fishingTask->fishHookedCounter--;
-
     if (TryPressA() == TRUE) {
         fishingTask->fishingTask = FUNC_FishingTask_CaughtFish;
         return TRUE;
     }
-
-    if (fishingTask->fishHookedCounter > 0) {
-        return FALSE;
-    }
-
-    fishingTask->fishingTask = FUNC_FishingTask_FishGotAway;
 
     return FALSE;
 }
@@ -570,9 +560,3 @@ static u16 ConvertRodTypeToRodItem(enum EncounterFishingRodType rodType)
         return ITEM_SUPER_ROD;
     }
 }
-
-static const int sRodTypeHookTimingWindow[] = {
-    [FISHING_TYPE_OLD_ROD] = 45,
-    [FISHING_TYPE_GOOD_ROD] = 30,
-    [FISHING_TYPE_SUPER_ROD] = 15
-};
