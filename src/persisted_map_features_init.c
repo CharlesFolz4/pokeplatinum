@@ -6,7 +6,6 @@
 #include "constants/field/dynamic_map_features.h"
 #include "constants/great_marsh_tram.h"
 
-#include "struct_defs/eterna_gym_clock_persisted_feature.h"
 #include "struct_defs/struct_02071B10.h"
 #include "struct_defs/struct_02071B30.h"
 #include "struct_defs/struct_02071B6C.h"
@@ -17,6 +16,7 @@
 #include "field/field_system.h"
 #include "field/field_system_sub2_t.h"
 #include "overlay006/great_marsh_tram.h"
+#include "overlay008/ov8_02249960.h"
 #include "overlay009/ov9_02249960.h"
 
 #include "field_system.h"

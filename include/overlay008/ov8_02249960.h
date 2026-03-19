@@ -7,6 +7,19 @@
 #include "message.h"
 #include "string_gf.h"
 
+enum EternaClockState {
+    ETERNA_CLOCK_INITIAL = 0,
+    ETERNA_CLOCK_DEFEATED_FIRST_TRAINER,
+    ETERNA_CLOCK_DEFEATED_SECOND_TRAINER,
+    ETERNA_CLOCK_DEFEATED_THIRD_TRAINER,
+    ETERNA_CLOCK_DEFEATED_GYM_LEADER,
+    ETERNA_CLOCK_MAX,
+};
+
+typedef struct EternaGymClockPersistedFeature {
+    u32 state;
+} EternaGymClockPersistedFeature;
+
 void PastoriaGym_PressButton(FieldSystem *fieldSystem);
 BOOL PastoriaGym_DynamicMapFeaturesCheckCollision(FieldSystem *fieldSystem, const int tileX, const int tileZ, const fx32 height, BOOL *isColliding);
 void PastoriaGym_DynamicMapFeaturesInit(FieldSystem *fieldSystem);
