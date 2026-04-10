@@ -11,7 +11,7 @@
 #include "struct_defs/struct_02071B6C.h"
 #include "struct_defs/struct_02071BF8.h"
 #include "struct_defs/struct_02071C18.h"
-#include "struct_defs/struct_02071C34.h"
+#include "struct_defs/villa_persisted_feature.h"
 
 #include "field/field_system.h"
 #include "field/field_system_sub2_t.h"
@@ -138,8 +138,8 @@ void PersistedMapFeatures_InitForVilla(FieldSystem *fieldSystem)
     PersistedMapFeatures *persistedMapFeatures = MiscSaveBlock_GetPersistedMapFeatures(FieldSystem_GetSaveData(fieldSystem));
     PersistedMapFeatures_InitWithID(persistedMapFeatures, DYNAMIC_MAP_FEATURES_VILLA);
 
-    UnkStruct_02071C34 *data = PersistedMapFeatures_GetBuffer(persistedMapFeatures, DYNAMIC_MAP_FEATURES_VILLA);
-    memset(data, 0, sizeof(UnkStruct_02071C34));
+    VillaPersistedFeature *data = PersistedMapFeatures_GetBuffer(persistedMapFeatures, DYNAMIC_MAP_FEATURES_VILLA);
+    memset(data, 0, sizeof(VillaPersistedFeature));
 }
 
 void PersistedMapFeatures_InitForDistortionWorld(FieldSystem *fieldSystem)
